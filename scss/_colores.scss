@@ -1,0 +1,18 @@
+$colorbase: #eeeeee;
+$titulos: #ff0000;
+$titulos2: #161112;
+$bg2: #a8a8a8;
+
+
+.navFlex{
+    background-color: $colorbase;
+}
+.navFlex a h2{
+    color: $titulos2;
+}
+.sectionCalculator{
+    background-color: $bg2;
+}
+.footerFlex{
+    background-color: $colorbase;
+}

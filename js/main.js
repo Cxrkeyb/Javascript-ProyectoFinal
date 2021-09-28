@@ -1,4 +1,4 @@
-function firstfinalproyect(){
+function calculator(){
     const array = [];
     let quantity = parseInt(prompt("Type the quantity of numbers for calculate"));
     for (i = 1; i <= quantity; i++) {
@@ -8,35 +8,35 @@ function firstfinalproyect(){
     switch (operation){
         case '1':
             let addition = parseFloat(prompt("What do you want to add?"));
-            console.log(array.join('\n'));
+            console.log('The numbers selected are '+array);
             const adittionarray = array.map(x => x+=addition);
             console.log("Adittions in order are " + adittionarray);
             break;
         case '2':
             let substraction = parseFloat(prompt("What do you want to substract?"));
-            console.log(array.join('\n'));
+            console.log('The numbers selected are '+array);
             const substractionarray = array.map(x => x-substraction);
             console.log("Substractions in order are " + substractionarray);
             break;
         case '3':
             let multiplication = parseFloat(prompt("What do you want to multiply?"));
-            console.log(array.join('\n'));
+            console.log('The numbers selected are '+array);
             const multiplicationarray = array.map(x => x*multiplication);
             console.log("Multiplications in order are " + multiplicationarray );
             break;
         case '4':
             let division = parseFloat(prompt("What do you want to divide?"));
-            console.log(array.join('\n'));
+            console.log('The numbers selected are '+array);
             const divisionarray = array.map(x => x/division);
             console.log("Divisions in order are " + divisionarray );
             break;  
         case '5':
-            console.log(array.join('\n'));
+            console.log('The numbers selected are '+array);
             const sqrt = array.map(x => Math.sqrt(x));
             console.log("Squareroots in order are " + sqrt);
             break;
         case '6':
-            console.log(array.join('\n'));
+            console.log('The numbers selected are '+array);
             const square = array.map(x => x * x);
             console.log("Squares in order are " + square);
             break;
