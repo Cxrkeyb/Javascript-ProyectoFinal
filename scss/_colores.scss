@@ -1,7 +1,8 @@
 $colorbase: #eeeeee;
 $titulos: #ff0000;
 $titulos2: #161112;
-$bg2: #888787;
+$cards: #9441ad;
+$bg2: lightsteelblue;
 
 
 .navFlex{
@@ -15,4 +16,7 @@ $bg2: #888787;
 }
 .footerFlex{
     background-color: $colorbase;
+}
+.cardTextSize{
+    color: $cards;
 }

@@ -55,10 +55,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #161112; }
 
 .sectionCalculator {
-  background-color: #888787; }
+  background-color: lightsteelblue; }
 
 .footerFlex {
   background-color: #eeeeee; }
+
+.cardTextSize {
+  color: #9441ad; }
 
 .logoNav {
   width: 200px; }
@@ -98,3 +101,9 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   width: 200px;
   height: 50px; }
+
+.sectionCalculatorParagraph {
+  font-size: 20px; }
+
+.sectionCalculatorTitle {
+  font-size: 32px; }

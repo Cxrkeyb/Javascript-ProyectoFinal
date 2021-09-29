@@ -58,14 +58,14 @@ function measureMeters(){
     if (Math.sign(difference) == 1){
         let multiply = PadRight(1, difference+1);
         number = number * multiply;
-        console.log(number, inputSecond);
+        alert(number + inputSecond);
     }
     else if(Math.sign(difference) == -1){
         let denominator = PadRight(1, ((difference*-1)+1));
         number = number / denominator;
-        console.log(number, inputSecond);
+        alert(number + " " + inputSecond);
     }
     else{
-        console.log(number, inputFirst);
+        alert(number + inputFirst);
     }
 }
