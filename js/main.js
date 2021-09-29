@@ -1,3 +1,8 @@
+function PadRight(value, length) {
+    return (value.toString().length < length) ? PadRight(value + "0", length) : 
+    value;
+}
+
 function calculator(){
     const array = [];
     let quantity = parseInt(prompt("Type the quantity of numbers for calculate"));
@@ -42,5 +47,25 @@ function calculator(){
             break;
         default:
             console.log("You did not select any operation")
+    }
+}
+function measureMeters(){
+    metering = ["mm", "cm", "dm", "m", "dam", "hm", "km"];
+    let inputFirst = prompt("Type the measure initial. (mm, cm, dm, m, dam, hm, km)");
+    let number = parseFloat(prompt("Type the number of " + inputFirst));
+    let inputSecond = prompt("Type the measure final. (mm, cm, dm, m, dam, hm, km)");
+    let difference = metering.indexOf(inputFirst) - metering.indexOf(inputSecond);
+    if (Math.sign(difference) == 1){
+        let multiply = PadRight(1, difference+1);
+        number = number * multiply;
+        console.log(number, inputSecond);
+    }
+    else if(Math.sign(difference) == -1){
+        let denominator = PadRight(1, ((difference*-1)+1));
+        number = number / denominator;
+        console.log(number, inputSecond);
+    }
+    else{
+        console.log(number, inputFirst);
     }
 }
