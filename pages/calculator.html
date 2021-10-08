@@ -12,8 +12,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Catamaran:wght@100;200;300;400;500&family=Josefin+Sans:wght@100;200;300;400;500&display=swap"
         rel="stylesheet">
-    <script src="../js/main.js">
-    </script>
 </head>
 
 <body>
@@ -33,14 +31,21 @@
                 </a>
             </div>
         </nav>
+        
     </header>
     <div class="sectionCalculator">
         <h2 class="sectionCalculatorTitle">Calculator</h2>
         <p class="sectionCalculatorParagraph">Virtual machine capable of performing arithmetic calculations.
         </p>
-        <h3>What is this button for?</h3>
-        <p class="sectionCalculatorParagraph">This button will help us to write several numbers in which we can perform different operations.</p>
-        <button onclick="calculator();" class="btn">Ejecutar</button>
+        <form class="indexClases" id="calculator" method="post">
+            <input type="number" placeholder="Escribe el primer número" id="valor1">
+            <input type="number" placeholder="Escribe el segundo número" id="valor2">
+            <button type="button" id="suma">Sumar</button>
+            <button type="button" id="resta">Restar</button>
+            <button type="button" id="multiplicar">Multiplicar</button>
+            <button type="button" id="dividir">Dividir</button>
+        </form>
+        <!-- <button onclick="calculator();" class="btn">Ejecutar</button> -->
     </div>
     <footer class="footerFlex">
         <a>
@@ -50,4 +55,5 @@
             <h5>Social Media</h5>
         </a>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
