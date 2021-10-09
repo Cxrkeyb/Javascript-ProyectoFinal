@@ -1,7 +1,56 @@
-function PadRight(value, length) {
-    return (value.toString().length < length) ? PadRight(value + "0", length) : 
-    value;
-}
+
+
+// DESAFIO CLASE 9
+// Obtener valores del html
+
+
+
+//  Enter funcionando, no entiendo porque cuando tengo el enter así no me deja escribir solo con las flechitas del form
+// function enter(e){
+//     e.preventDefault();
+//     if (e.keyCode == 13)
+//     parrafo.innerHTML = `<p>No seleccionaste ninguna operación<p>`
+//     document.body.appendChild(parrafo);;
+// }
+// window.onkeydown = enter;
+
+// AÑADIR EVENTO
+btnsuma.addEventListener('click', suma);
+btn_resta.addEventListener("click", resta);
+btn_multiplicar.addEventListener("click", multiplicar);
+btn_dividir.addEventListener("click", dividir);
+
+//Funciones de los botones
+// function suma(){
+//     let numero1 = parseFloat(document.getElementById('valor1').value)
+//     let numero2 = parseFloat(document.getElementById('valor2').value)
+//     let total = numero1 + numero2;
+//     parrafo.innerHTML = `<p>Bienvenido el primer número que digitó es ${numero1} y el segundo número es ${numero2}, el resultado de la operación es ${total}<p>`
+//     calculator.appendChild(parrafo);
+// }
+// function resta(){
+//     let numero1 = parseFloat(document.getElementById("valor1").value)
+//     let numero2 = parseFloat(document.getElementById("valor2").value)
+//     let total = numero1 - numero2;
+//     parrafo.innerHTML = `<p>Bienvenido el primer número que digitó es ${numero1} y el segundo número es ${numero2}, el resultado de la operación es ${total}<p>`
+//     calculator.appendChild(parrafo);
+// }
+
+// function multiplicar(){
+//     let numero1 = parseFloat(document.getElementById("valor1").value)
+//     let numero2 = parseFloat(document.getElementById("valor2").value)
+//     let total = numero1 * numero2;
+//     parrafo.innerHTML = `<p>Bienvenido el primer número que digitó es ${numero1} y el segundo número es ${numero2}, el resultado de la operación es ${total}<p>`
+//     calculator.appendChild(parrafo);
+// }
+// function dividir(){
+//     let numero1 = parseFloat(document.getElementById("valor1").value)
+//     let numero2 = parseFloat(document.getElementById("valor2").value)
+//     let total = numero1 / numero2;
+//     parrafo.innerHTML = `<p>Bienvenido el primer número que digitó es ${numero1} y el segundo número es ${numero2}, el resultado de la operación es ${total}<p>`
+//     calculator.appendChild(parrafo);
+// }
+
 
 // function calculator(){
 //     const array = [];
@@ -68,60 +117,4 @@ function measureMeters(){
     else{
         alert(number + inputFirst);
     }
-}
-// DESAFIO CLASE 9
-// Obtener valores del html
-let calculator = document.getElementById("calculator")
-let numero2 = document.getElementById("valor2");
-let btnsuma = document.getElementById('suma');
-let btn_resta = document.getElementById("resta");
-let btn_multiplicar = document.getElementById("multiplicar");
-let btn_dividir = document.getElementById("dividir");
-let parrafo = document.createElement("p");
-
-
-//  Enter funcionando, no entiendo porque cuando tengo el enter así no me deja escribir solo con las flechitas del form
-// function enter(e){
-//     e.preventDefault();
-//     if (e.keyCode == 13)
-//     parrafo.innerHTML = `<p>No seleccionaste ninguna operación<p>`
-//     document.body.appendChild(parrafo);;
-// }
-// window.onkeydown = enter;
-
-// AÑADIR EVENTO
-btnsuma.addEventListener('click', suma);
-btn_resta.addEventListener("click", resta);
-btn_multiplicar.addEventListener("click", multiplicar);
-btn_dividir.addEventListener("click", dividir);
-
-//Funciones de los botones
-function suma(){
-    let numero1 = parseFloat(document.getElementById('valor1').value)
-    let numero2 = parseFloat(document.getElementById('valor2').value)
-    let total = numero1 + numero2;
-    parrafo.innerHTML = `<p>Bienvenido el primer número que digitó es ${numero1} y el segundo número es ${numero2}, el resultado de la operación es ${total}<p>`
-    calculator.appendChild(parrafo);
-}
-function resta(){
-    let numero1 = parseFloat(document.getElementById("valor1").value)
-    let numero2 = parseFloat(document.getElementById("valor2").value)
-    let total = numero1 - numero2;
-    parrafo.innerHTML = `<p>Bienvenido el primer número que digitó es ${numero1} y el segundo número es ${numero2}, el resultado de la operación es ${total}<p>`
-    calculator.appendChild(parrafo);
-}
-
-function multiplicar(){
-    let numero1 = parseFloat(document.getElementById("valor1").value)
-    let numero2 = parseFloat(document.getElementById("valor2").value)
-    let total = numero1 * numero2;
-    parrafo.innerHTML = `<p>Bienvenido el primer número que digitó es ${numero1} y el segundo número es ${numero2}, el resultado de la operación es ${total}<p>`
-    calculator.appendChild(parrafo);
-}
-function dividir(){
-    let numero1 = parseFloat(document.getElementById("valor1").value)
-    let numero2 = parseFloat(document.getElementById("valor2").value)
-    let total = numero1 / numero2;
-    parrafo.innerHTML = `<p>Bienvenido el primer número que digitó es ${numero1} y el segundo número es ${numero2}, el resultado de la operación es ${total}<p>`
-    calculator.appendChild(parrafo);
 }

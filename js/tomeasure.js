@@ -1,0 +1,1 @@
+start.addEventListener("click", measureMeters)

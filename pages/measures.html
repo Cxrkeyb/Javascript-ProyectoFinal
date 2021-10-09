@@ -33,12 +33,36 @@
         </nav>
     </header>
     <div class="sectionCalculator">
-        <h2 class="sectionCalculatorTitle">Measures</h2>
-        <p class="sectionCalculatorParagraph"> Transform measures to different measures whether they are larger or smaller.
+        <h2 class="sectionCalculatorTitle">Conversor</h2>
+        <p class="sectionCalculatorParagraph">Transform measures to different measures whether they are larger or smaller.</p>
+        <h2>How works?</h2>
+        <p class="sectionCalculatorParagraph">This will help you transform either a measurement from kilometers to miles and many more functionalities.
         </p>
-        <h3>What is this button for?</h3>
-        <p class="sectionCalculatorParagraph">This will help you transform either a measurement from kilometers to miles and many more functionalities.</p>
-        <button onclick="measureMeters();" class="btn">Ejecutar</button>
+        <div id="convertions">
+            <div>
+            <input type="number" placeholder="Type the measure" id="valor1">
+            <select name="measure" id="measure">
+                <option>mm</option>
+                <option>cm</option>
+                <option>dm</option>
+                <option>m</option>
+                <option>Dm</option>
+                <option>Hm</option>
+                <option>Km</option>
+            </select>
+            <span>to</span>
+            <select name="toMeasure" id="toMeasure">
+                <option>mm</option>
+                <option>cm</option>
+                <option>dm</option>
+                <option>m</option>
+                <option>Dm</option>
+                <option>Hm</option>
+                <option>Km</option>
+            </select>
+            </div>
+            <button type="button" id="startProcess">Convert</button>
+        </div>
     </div>
     <footer class="footerFlex">
         <a>
@@ -48,5 +72,7 @@
             <h5>Social Media</h5>
         </a>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="../js/variables.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/tomeasure.js"></script>
 </body>
