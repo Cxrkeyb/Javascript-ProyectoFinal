@@ -16,11 +16,19 @@ function divide(a,b){
 // Funciones de la calculadora
 // Suma de dos valores  
 function additionC(){
+    console.log(j)
     number1 = parseFloat(document.getElementById('valor1').value)
     number2 = parseFloat(document.getElementById('valor2').value)
     addition(number1,number2);
     paragraph.innerHTML = `<p>Welcome the first number typed was ${number1} and the second was ${number2}, the result of the operation is  ${total}<p>`
-    calculator.appendChild(paragraph);
+    operation = {number: number1, number2: number2, operation: "+" ,total: total}
+    for(i=1; i <= j; i++){
+        localStorage.setItem("Calculation", JSON.stringify(operation));
+        calculation = JSON.parse(localStorage.getItem("Calculation"));
+        paragraph.innerHTML = `<p>Welcome the first number typed was ${number1} and the second was ${number2}, the result of the operation is  ${total}<p>`
+
+    }
+    j = j + 1
 }
 // Resta de dos valores  
 function substractionC(){
@@ -63,10 +71,12 @@ function measureMeters(){
     else if (Math.sign(total) == -1){
         distance = PadRight(1, total+1);
         result = number1 / distance;
-        alert("Negativo" + result + select2);
+        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
+        convertions.appendChild(paragraph);
     }
     else{
-        alert("Neutro"+result + select1);
+        paragraph.innerHTML = `<p>There isn't a convertion${number1} ${select1}<p>`
+        convertions.appendChild(paragraph);
     }
 }
 // Añade ceros a la parte derecha para las conversiones

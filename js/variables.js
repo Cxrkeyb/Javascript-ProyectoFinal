@@ -7,6 +7,9 @@ let total;
 let select1;
 let select2;
 let distance;
+let operation;
+let calculation;
+let j = 1;
 
 // Obteniendo variables desde ids del HTML
 // Variables de la calculadora
@@ -15,6 +18,7 @@ let btn_addition = document.getElementById('addition');
 let btn_substraction = document.getElementById("substraction");
 let btn_multiply = document.getElementById("multiply");
 let btn_divide = document.getElementById("divide");
+
 
 // Variables de conversor de medidas
 let convertions = document.getElementById("convertions");
