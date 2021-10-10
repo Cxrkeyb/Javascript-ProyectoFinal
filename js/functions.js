@@ -68,13 +68,13 @@ function measureMeters(){
         convertions.appendChild(paragraph);
     }
     else if (Math.sign(total) == -1){
-        distance = PadRight(1, total+1);
+        distance = PadRight(1, (total*-1)+1);
         result = number1 / distance;
         paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
         convertions.appendChild(paragraph);
     }
     else{
-        paragraph.innerHTML = `<p>There isn't a convertion${number1} ${select1}<p>`
+        paragraph.innerHTML = `<p>There isn't a convertion ${number1} ${select1}<p>`
         convertions.appendChild(paragraph);
     }
 }
