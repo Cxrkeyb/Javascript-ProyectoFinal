@@ -16,19 +16,18 @@ function divide(a,b){
 // Funciones de la calculadora
 // Suma de dos valores  
 function additionC(){
-    console.log(j)
     number1 = parseFloat(document.getElementById('valor1').value)
     number2 = parseFloat(document.getElementById('valor2').value)
     addition(number1,number2);
     paragraph.innerHTML = `<p>Welcome the first number typed was ${number1} and the second was ${number2}, the result of the operation is  ${total}<p>`
-    operation = {number: number1, number2: number2, operation: "+" ,total: total}
-    for(i=1; i <= j; i++){
-        localStorage.setItem("Calculation", JSON.stringify(operation));
-        calculation = JSON.parse(localStorage.getItem("Calculation"));
-        paragraph.innerHTML = `<p>Welcome the first number typed was ${number1} and the second was ${number2}, the result of the operation is  ${total}<p>`
-
-    }
-    j = j + 1
+    calculator.appendChild(paragraph);
+    // operation = {number: number1, number2: number2, operation: "+" ,total: total}
+    // for(i=1; i <= j; i++){
+    //     localStorage.setItem("Calculation", JSON.stringify(operation));
+    //     calculation = JSON.parse(localStorage.getItem("Calculation"));
+    //     paragraph.innerHTML = `<p>Welcome the first number typed was ${number1} and the second was ${number2}, the result of the operation is  ${total}<p>`
+    // }
+    // j = j + 1
 }
 // Resta de dos valores  
 function substractionC(){
