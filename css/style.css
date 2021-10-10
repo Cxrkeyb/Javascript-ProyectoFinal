@@ -57,6 +57,9 @@ h1, h2, h3, h4, h5, h6 {
 .sectionCalculator {
   background-color: lightsteelblue; }
 
+.tableBeforeValues {
+  background-color: lightsteelblue; }
+
 .footerFlex {
   background-color: #eeeeee; }
 
@@ -92,7 +95,13 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-around; }
 
 .sectionCalculator {
-  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px; }
+
+.tableBeforeValues {
   display: flex;
   justify-content: center;
   align-items: center;

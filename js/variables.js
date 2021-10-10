@@ -7,9 +7,10 @@ let total;
 let select1;
 let select2;
 let distance;
-let operation;
+let index = 0;
+let operation = [];
+let calculated = {};
 let calculation;
-let j = 1;
 
 // Obteniendo variables desde ids del HTML
 // Variables de la calculadora

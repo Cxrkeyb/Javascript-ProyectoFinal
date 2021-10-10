@@ -1,5 +1,9 @@
 // FUNCTIONS
 //Funciones generales
+function getValues(){
+    number1 = parseFloat(document.getElementById('valor1').value)
+    number2 = parseFloat(document.getElementById('valor2').value)
+}
 function addition(a,b){
     total = a+b;
 }
@@ -10,48 +14,62 @@ function multiply(a,b){
     total = a*b;
 }
 function divide(a,b){
-    total = a/b;
+    total = (a/b).toFixed(4);
 }
 
 // Funciones de la calculadora
+// Almacenar valores y mostrarlos en pantalla
+function getStorageC(a){
+    operation = sessionStorage.getItem('OCalculated');
+    if(!operation){
+        operation = []
+    }else{
+    operation = JSON.parse(operation)
+    }
+    calculated = {
+        number: number1,
+        number2: number2,
+        operator: a,
+        total: total
+    }    
+    operation.push(calculated);
+    let div = document.createElement("div");
+    let text = document.createTextNode(`Operation ${index+1}, ${(operation[index]).number} ${(operation[index]).operator} ${(operation[index]).number2} = ${(operation[index]).total}`)
+    div.appendChild(text);   
+    tableBeforeValues.appendChild(div)
+    index = index + 1;  
+    operation = JSON.stringify(operation);
+    sessionStorage.setItem('OCalculated', operation)
+}
 // Suma de dos valores  
 function additionC(){
-    number1 = parseFloat(document.getElementById('valor1').value)
-    number2 = parseFloat(document.getElementById('valor2').value)
+    getValues();
     addition(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
-    // operation = {number: number1, number2: number2, operation: "+" ,total: total}
-    // for(i=1; i <= j; i++){
-    //     localStorage.setItem("Calculation", JSON.stringify(operation));
-    //     calculation = JSON.parse(localStorage.getItem("Calculation"));
-    //     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
-    // }
-    // j = j + 1
+    getStorageC("+");
+    
 }
 // Resta de dos valores  
 function substractionC(){
-    number1 = parseFloat(document.getElementById('valor1').value)
-    number2 = parseFloat(document.getElementById('valor2').value)
     substraction(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
+    getStorageC("-");
 }
 // Multiplicación de dos valores  
 function multiplyC(){
-    number1 = parseFloat(document.getElementById('valor1').value)
-    number2 = parseFloat(document.getElementById('valor2').value)
     multiply(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
+    getStorageC("*");
 }
 // Suma de dos valores  
 function divideC(){
-    number1 = parseFloat(document.getElementById('valor1').value)
-    number2 = parseFloat(document.getElementById('valor2').value)
     divide(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
+    getStorageC("/");
 }
 
 // Funciones de cambios de medidas

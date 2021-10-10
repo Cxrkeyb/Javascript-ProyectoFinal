@@ -1,5 +1,11 @@
 .sectionCalculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 500px;
+}
+.tableBeforeValues{
     display: flex;
     justify-content: center;
     align-items: center;
