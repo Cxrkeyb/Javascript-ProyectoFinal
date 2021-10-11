@@ -3,10 +3,14 @@ $titulos: #ff0000;
 $titulos2: #161112;
 $cards: #9441ad;
 $bg2: lightsteelblue;
+$bgT: lightgray;
 
 
 .navFlex{
     background-color: $colorbase;
+}
+.tableInside{
+    background-color:lightgray;
 }
 .navFlex a h2{
     color: $titulos2;

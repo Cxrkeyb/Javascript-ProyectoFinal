@@ -15,10 +15,19 @@ let calculation;
 // Obteniendo variables desde ids del HTML
 // Variables de la calculadora
 let calculator = document.getElementById("calculator")
+let tableGeneral = document.getElementsByClassName("tableGeneral")
 let btn_addition = document.getElementById('addition');
 let btn_substraction = document.getElementById("substraction");
 let btn_multiply = document.getElementById("multiply");
 let btn_divide = document.getElementById("divide");
+let operatorD;
+let value1D;
+let value2D;
+let totalD;
+let operatorP;
+let value1P;
+let value2P;
+let totalP;
 
 
 // Variables de conversor de medidas
@@ -28,4 +37,5 @@ let start = document.getElementById("startProcess")
 
 // Creando variables de texto
 let paragraph = document.createElement("p");
+
 

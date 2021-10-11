@@ -51,6 +51,9 @@ h1, h2, h3, h4, h5, h6 {
 .navFlex {
   background-color: #eeeeee; }
 
+.tableInside {
+  background-color: lightgray; }
+
 .navFlex a h2 {
   color: #161112; }
 
@@ -105,7 +108,20 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 10px; }
+
+.tableGeneral {
+  display: flex;
+  flex-direction: row; }
+
+.tableInside {
+  width: 100px;
+  height: 40px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .btn {
   width: 200px;
