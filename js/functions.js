@@ -69,6 +69,7 @@ function additionC(){
 }
 // Resta de dos valores  
 function substractionC(){
+    getValues();
     substraction(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
@@ -76,6 +77,7 @@ function substractionC(){
 }
 // Multiplicación de dos valores  
 function multiplyC(){
+    getValues();
     multiply(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
@@ -83,40 +85,14 @@ function multiplyC(){
 }
 // Suma de dos valores  
 function divideC(){
+    getValues();
     divide(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
     getStorageC("/");
 }
 function valueBefore(){
-    let divTable = document.createElement("div");
-    operatorD = document.createElement("div");
-    value1D = document.createElement("div");
-    value2D = document.createElement("div");
-    totalD = document.createElement("div");
-    operatorP = document.createElement("p");
-    value1P = document.createElement("p");
-    value2P = document.createElement("p");
-    totalP = document.createElement("p");
-    operatorP.innerHTML = (operation[index]).operator
-    // let text = document.createTextNode(`Operation ${index+1}( ${(operation[index]).number} ${(operation[index]).operator} ${(operation[index]).number2} = ${(operation[index]).total})`);
-    operatorD.appendChild(operatorP)
-    operatorD.classList.toggle('tableInside')
-    value1P.innerHTML = (operation[index]).number
-    value1D.appendChild(value1P)
-    value1D.classList.toggle('tableInside')
-    value2P.innerHTML = (operation[index]).number2
-    value2D.appendChild(value2P)
-    value2D.classList.toggle('tableInside')
-    totalP.innerHTML = (operation[index]).total
-    totalD.appendChild(totalP)
-    totalD.classList.toggle('tableInside')
-    divTable.appendChild(operatorD)
-    divTable.appendChild(value1D)
-    divTable.appendChild(value2D)
-    divTable.appendChild(totalD)
-    tableBeforeValues.appendChild(divTable)
-    divTable.classList.toggle('tableGeneral')
+    $('#tableBeforeValues').prepend(`<div class="tableGeneral"><div class="tableInside">${(operation[index]).operator}</div><div class="tableInside">${(operation[index]).number}</div><div class="tableInside">${(operation[index]).number2}</div><div class="tableInside">${(operation[index]).total}</div></div>`)
 }
 
 // Funciones de cambios de medidas
