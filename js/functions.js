@@ -124,7 +124,50 @@ function PadRight(value, length) {
     value;
 }
 
-function characterDiv (){
+// Funciones de área
+function squareA(){
+    side = document.getElementById("areaSquare").value;
+    select = document.getElementById('measureS').value;
+    total = side * side;
+    
+    $("#totalAreaS").empty();
+    $("#totalAreaS").append(`<p class="totalTxt">Area = ${total + select}</p>`)
+}
+function rectangleA(){
+    bxh("areaRectangleB", "areaRectangleH", "measureR");
+    
+    $("#totalAreaR").empty();
+    $("#totalAreaR").append(`<p class="totalTxt">Area = ${total + select}</p>`)
+}
+function triangleA(){
+    bxh("areaTriangleB", "areaTriangleH", "measureT");
+
+    $("#totalAreaT").empty();
+    $("#totalAreaT").append(`<p class="totalTxt">Area = ${total + select}</p>`)
+}
+function circleA(){
+    radius = document.getElementById("areaCircleR").value;
+    select = document.getElementById("measureC").value;
+
+    total = Math.PI * Math.pow(radius, 2);
+    $("#totalAreaC").empty();
+    $("#totalAreaC").append(`<p class="totalTxt">Area = ${total.toFixed(6) + select}</p>`)
+}
+// base por altura
+function bxh(baseId,heightId,selectorId){
+    base = document.getElementById(baseId).value;
+    height = document.getElementById(heightId).value;
+    select = document.getElementById(selectorId).value;
+    total = base * height;
+}
+
+function scroll (){
+    $(body).animate({
+        scrollBottom:700
+    }, slow);
+}
+// Personajes creación de div en navbar
+function characterDiv (a){
     $.get(RaMURL, function (res, status) {
         if (status === "success") {
             if (number <= 20 & number >= 0) {
@@ -132,7 +175,7 @@ function characterDiv (){
                 <div><img src="${res.results[number].image}" class="characterImage"></div>
                 <div class="characterName">${res.results[number].name}</div>
             </div>`)
-                $(".navUser").slideUp(1000);
+                $(".navUser").slideUp(a);
             }
             sessionStorage.setItem("character", number);
         }

@@ -35,6 +35,12 @@ let convertions = document.getElementById("convertions");
 let select_Measure = document.getElementById("toMeasure")
 let start = document.getElementById("startProcess")
 
+// Variables of geometric figures
+let btn_areaS = document.getElementById("calculateSquareA");
+let btn_areaR = document.getElementById("calculateRectangleA");
+let btn_areaT = document.getElementById("calculateTriangleA");
+let btn_areaC = document.getElementById("calculateCircleA")
+
 // Creando variables de texto
 let paragraph = document.createElement("p");
 

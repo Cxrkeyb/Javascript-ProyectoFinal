@@ -1,12 +1,57 @@
-.cuadrado-2{
+.sectionGeometric{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.staticFigure{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    padding-top: 10px;
+}
+.square{
     width: 100px; 
     height: 100px; 
-    border: 3px solid #000000;
+    background-color: #302840;
+}
+.rectangle{
+    width: 100px;
+    height: 50px;
+    background-color: #302840;
+}
+.triangle {
+    width: 0px; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #302840;
+}
+.circle{
+    border-radius: 50%;
+    background-color: #302840;
+    width: 100px;
+    height: 100px;
 }
 .poster{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: gray;
+    background-color: #9370d8;
+    border-radius: 20px;
+    padding: 5px;
+    width: 220px;
+}
+.calculateBtn{
+    width: 75px;
+    height: 37.5px;
+    border-radius: 5px;
+    background-color: mintcream;
+    margin-top: 2px;
+}
+.inputGeometric{
+    width: 50px;
 }
