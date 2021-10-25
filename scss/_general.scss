@@ -6,6 +6,13 @@ body{
 h1,h2,h3,h4,h5,h6{
     font-family: 'Balsamiq Sans', cursive;
 }
+.sectionGeneral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+}
 // font-family: 'Balsamiq Sans', cursive;
 // font-family: 'Catamaran', sans-serif;
 // font-family: 'Josefin Sans', sans-serif;

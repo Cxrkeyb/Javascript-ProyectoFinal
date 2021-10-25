@@ -64,8 +64,7 @@ function additionC(){
     addition(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
-    getStorageC("+");
-    
+    getStorageC("+"); 
 }
 // Resta de dos valores  
 function substractionC(){
@@ -123,4 +122,19 @@ function measureMeters(){
 function PadRight(value, length) {
     return (value.toString().length < length) ? PadRight(value + "0", length) : 
     value;
+}
+
+function characterDiv (){
+    $.get(RaMURL, function (res, status) {
+        if (status === "success") {
+            if (number <= 20 & number >= 0) {
+                $(".characterContainer").append(`<div class="container-character">
+                <div><img src="${res.results[number].image}" class="characterImage"></div>
+                <div class="characterName">${res.results[number].name}</div>
+            </div>`)
+                $(".navUser").slideUp(1000);
+            }
+            sessionStorage.setItem("character", number);
+        }
+    })
 }
