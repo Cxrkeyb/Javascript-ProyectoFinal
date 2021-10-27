@@ -40,6 +40,13 @@ let btn_areaS = document.getElementById("calculateSquareA");
 let btn_areaR = document.getElementById("calculateRectangleA");
 let btn_areaT = document.getElementById("calculateTriangleA");
 let btn_areaC = document.getElementById("calculateCircleA")
+let btn_perimeterS = document.getElementById("calculateSquareP");
+let btn_perimeterR = document.getElementById("calculateRectangleP");
+let btn_perimeterT = document.getElementById("calculateTriangleP");
+let btn_perimeterC = document.getElementById("calculateCircleP")
+let btn_radiusC = document.getElementById("calculateCircleR");
+let btn_diameterC = document.getElementById("calculateCircleD");
+let btn_circumferenceC = document.getElementById("calculateCircleC");
 
 // Creando variables de texto
 let paragraph = document.createElement("p");

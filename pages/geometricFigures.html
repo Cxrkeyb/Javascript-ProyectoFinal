@@ -40,86 +40,323 @@
         </nav>
     </header>
     <div class="sectionGeneral">
-        <div class="sectionGeometric">
-            <div class="poster" id="squareCard">
-                <div class="staticFigure">
-                    <div class="square"></div>
+        <div class="geometricSections">
+            <div class="geometricExplain">
+                <h2>Area</h2>
+                <p>Is a metric concept that can be used to assign a measure to the extent of a surface, expressed in
+                    mathematics as units of measurement called surface units.</p>
+                <div class="geometricLinear">
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Square Area formula</h3>
+                        <p><span class="txtExplain">Area =</span> Side <span class="txtExplain">.</span> Side</p>
+                    </div>
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Rectangle Area formula</h3>
+                        <p><span class="txtExplain">Area =</span> Base <span class="txtExplain">.</span> Height</p>
+                    </div>
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Triangle Area formula</h3>
+                        <div class="formulaExplain">
+                            <p><span class="txtExplain">Area =</span>
+                                <div>
+                                    <div class="textUp">Base <span class="txtExplain">.</span> Height</div>
+                                    <div><span>2</span></div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Circle Area formula</h3>
+                        <p><span class="txtExplain">Area =</span> π <span class="txtExplain">.</span> radius<sup>2</sup>
+                        </p>
+                    </div>
                 </div>
-                <h2 class="titleFigure">Square</h2>
-                <h3 class="functionFigure">Calculate area</h3>
-                <div><input type="number" id="areaSquare" placeholder="side" class="inputGeometric">
-                    <select name="measure" id="measureS">
-                        <option>mm</option>
-                        <option>cm</option>
-                        <option>dm</option>
-                        <option>m</option>
-                        <option>Dm</option>
-                        <option>Hm</option>
-                        <option>Km</option>
-                    </select></div>
-                <button type="button" id="calculateSquareA" class="calculateBtn"><i class="fas fa-play"></i> </button>
-                <div id="totalAreaS"></div>
-            </div>
-            <div class="poster" id="rectangleCard">
-                <div class="staticFigure">
-                    <div class="rectangle"></div>
+                <div class="geometricLinear">
+                    <div class="poster" id="squareCard">
+                        <div class="staticFigure">
+                            <div class="square"></div>
+                        </div>
+                        <h2 class="titleFigure">Square</h2>
+                        <h3 class="functionFigure">Calculate area</h3>
+                        <div><input type="number" id="areaSquare" placeholder="side" class="inputGeometric">
+                            <select name="measure" id="measureAS">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateSquareA" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalAreaS"></div>
+                    </div>
+                    <div class="poster" id="rectangleCard">
+                        <div class="staticFigure">
+                            <div class="rectangle"></div>
+                        </div>
+                        <h2 class="titleFigure">Rectangle</h2>
+                        <h3 class="functionFigure">Calculate area</h3>
+                        <div><input type="number" id="areaRectangleB" placeholder="base" class="inputGeometric">
+                            <input type="number" id="areaRectangleH" placeholder="height" class="inputGeometric">
+                            <select name="measure" id="measureAR">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateRectangleA" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalAreaR"></div>
+                    </div>
+                    <div class="poster" id="triangleCard">
+                        <div class="staticFigure">
+                            <div class="triangle"></div>
+                        </div>
+                        <h2 class="titleFigure">Triangle</h2>
+                        <h3 class="functionFigure">Calculate area</h3>
+                        <div><input type="number" id="areaTriangleB" placeholder="base" class="inputGeometric">
+                            <input type="number" id="areaTriangleH" placeholder="height" class="inputGeometric">
+                            <select name="measure" id="measureAT">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateTriangleA" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalAreaT"></div>
+                    </div>
+                    <div class="poster" id="circleCard">
+                        <div class="staticFigure">
+                            <div class="circle"></div>
+                        </div>
+                        <h2 class="titleFigure">Circle</h2>
+                        <h3 class="functionFigure">Calculate area</h3>
+                        <div><input type="number" id="areaCircleR" placeholder="radius" class="inputGeometric">
+                            <select name="measure" id="measureAC">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <a href="#scrolled">Don't know the radius?</a>
+                        <button type="button" id="calculateCircleA" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalAreaC"></div>
+                    </div>
                 </div>
-                <h2 class="titleFigure">Rectangle</h2>
-                <h3 class="functionFigure">Calculate area</h3>
-                <div><input type="number" id="areaRectangleB" placeholder="base" class="inputGeometric">
-                    <input type="number" id="areaRectangleH" placeholder="height" class="inputGeometric">
-                    <select name="measure" id="measureR">
-                        <option>mm</option>
-                        <option>cm</option>
-                        <option>dm</option>
-                        <option>m</option>
-                        <option>Dm</option>
-                        <option>Hm</option>
-                        <option>Km</option>
-                    </select></div>
-                <button type="button" id="calculateRectangleA" class="calculateBtn"><i class="fas fa-play"></i>
-                </button>
-                <div id="totalAreaR"></div>
             </div>
-            <div class="poster" id="triangleCard">
-                <div class="staticFigure">
-                    <div class="triangle"></div>
+        </div>
+        <div class="geometricSections">
+            <div class="geometricExplain">
+                <h2>Perimeter</h2>
+                <p>The perimeter is the length that corresponds to the outline of a figure, that is, it is the sum of
+                    the sides that form the polygon or, in the case of a circle, the measure of its boundary called
+                    circumference.</p>
+                <div class="geometricLinear">
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Square Perimeter formula</h3>
+                        <p><span class="txtExplain">P =</span> Side <span class="txtExplain">.</span> 4</p>
+                    </div>
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Rectangle Perimeter formula</h3>
+                        <p><span class="txtExplain">P = (</span>2<span class="txtExplain">.</span> Base <span
+                                class="txtExplain">)+(</span>2<span class="txtExplain">.</span>Height<span
+                                class="txtExplain">)</span></p>
+                    </div>
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Triangle Perimeter formula</h3>
+                        <p>
+                            <span class="txtExplain">P =</span> SideA <span class="txtExplain">+</span> SideB <span
+                                class="txtExplain">+</span> SideC
+                        </p>
+                    </div>
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Circle Perimeter formula</h3>
+                        <p><span class="txtExplain">P =</span> 2 <span class="txtExplain">.</span> π <span class="txtExplain">.</span> radius
+                        </p>
+                    </div>
                 </div>
-                <h2 class="titleFigure">Triangle</h2>
-                <h3 class="functionFigure">Calculate area</h3>
-                <div><input type="number" id="areaTriangleB" placeholder="base" class="inputGeometric">
-                    <input type="number" id="areaTriangleH" placeholder="height" class="inputGeometric">
-                    <select name="measure" id="measureT">
-                        <option>mm</option>
-                        <option>cm</option>
-                        <option>dm</option>
-                        <option>m</option>
-                        <option>Dm</option>
-                        <option>Hm</option>
-                        <option>Km</option>
-                    </select></div>
-                <button type="button" id="calculateTriangleA" class="calculateBtn"><i class="fas fa-play"></i> </button>
-                <div id="totalAreaT"></div>
+                <div class="geometricLinear">
+                    <div class="poster" id="squareCardA">
+                        <div class="staticFigure">
+                            <div class="square"></div>
+                        </div>
+                        <h2 class="titleFigure">Square</h2>
+                        <h3 class="functionFigure">Calculate perimeter</h3>
+                        <div><input type="number" id="perimeterSquare" placeholder="side" class="inputGeometric">
+                            <select name="measure" id="measurePS">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateSquareP" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalPerimeterS"></div>
+                    </div>
+                    <div class="poster" id="rectangleCardA">
+                        <div class="staticFigure">
+                            <div class="rectangle"></div>
+                        </div>
+                        <h2 class="titleFigure">Rectangle</h2>
+                        <h3 class="functionFigure">Calculate perimeter</h3>
+                        <div><input type="number" id="perimeterRectangleB" placeholder="base" class="inputGeometric">
+                            <input type="number" id="perimeterRectangleH" placeholder="height" class="inputGeometric">
+                            <select name="measure" id="measurePR">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateRectangleP" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalPerimeterR"></div>
+                    </div>
+                    <div class="poster" id="triangleCard">
+                        <div class="staticFigure">
+                            <div class="triangle"></div>
+                        </div>
+                        <h2 class="titleFigure">Triangle</h2>
+                        <h3 class="functionFigure">Calculate perimeter</h3>
+                        <div class="inputsFigure"><input type="number" id="perimeterTriangleA" placeholder="sideA"
+                                class="inputGeometric">
+                            <input type="number" id="perimeterTriangleB" placeholder="sideB" class="inputGeometric">
+                            <input type="number" id="perimeterTriangleC" placeholder="sideC" class="inputGeometric">
+                            <select name="measure" id="measurePT">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateTriangleP" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalPerimeterT"></div>
+                    </div>
+                    <div class="poster" id="circleCardP">
+                        <div class="staticFigure">
+                            <div class="circle"></div>
+                        </div>
+                        <h2 class="titleFigure">Circule</h2>
+                        <h3 class="functionFigure">Calculate perimeter</h3>
+                        <div><input type="number" id="perimeterCircleR" placeholder="radius" class="inputGeometric">
+                            <select name="measure" id="measurePC">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <a href="#scrolled">Don't know the radius?</a>
+                        <button type="button" id="calculateCircleP" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalPerimeterC"></div>
+                    </div>
+                </div>
             </div>
-            <div class="poster" id="circleCard">
+        </div>
+        <div class="geometricSections">
+            <div class="geometricExplain">
+                <h2>Circle</h2>
                 <div class="staticFigure">
                     <div class="circle"></div>
                 </div>
-                <h2 class="titleFigure">Circule</h2>
-                <h3 class="functionFigure">Calculate area</h3>
-                <div><input type="number" id="areaCircleR" placeholder="radius" class="inputGeometric">
-                    <select name="measure" id="measureC">
-                        <option>mm</option>
-                        <option>cm</option>
-                        <option>dm</option>
-                        <option>m</option>
-                        <option>Dm</option>
-                        <option>Hm</option>
-                        <option>Km</option>
-                    </select></div>
-                <a href="#scrolled">Dont know the radius?</a>
-                <button type="button" id="calculateCircleA" class="calculateBtn"><i class="fas fa-play"></i> </button>
-                <div id="totalAreaC"></div>
+                <p>Some of the operations with their formula for the circle are as follows</p>
+                <div class="geometricLinear">
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Radius formula</h3>
+                        <div class="formulaExplain">
+                            <p><span class="txtExplain">radius =</span>
+                                <div>
+                                    <div class="textUp">Perimeter</div>
+                                    <div>2<span class="txtExplain">.</span>π</div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Diameter formula</h3>
+                        <p><span class="txtExplain">diameter = </span>2<span class="txtExplain">.</span> radius </p>
+                    </div>
+                    <div class="geometricFormulaTxT">
+                        <h3 class="titleExplain">Circumference formula</h3>
+                        <p>
+                            <span class="txtExplain">C =</span> Diameter <span class="txtExplain">.</span> π 
+                        </p>
+                    </div>
+                </div>
+                <div class="geometricLinear">
+                    <div class="poster" id="circleCardR">
+                        <h3 class="functionFigure">Calculate radius</h3>
+                        <div><input type="number" id="radiusCircle" placeholder="radius" class="inputGeometric">
+                            <select name="measure" id="measureRC">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateCircleR" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalRadiusC"></div>
+                    </div>
+                    <div class="poster" id="circleCardD">
+                        <h3 class="functionFigure">Calculate diameter</h3>
+                        <div><input type="number" id="diameterCircle" placeholder="radius" class="inputGeometric">
+                            <select name="measure" id="measureDC">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateCircleD" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalDiameterC"></div>
+                    </div>
+                    <div class="poster" id="circleCardC">
+                        <h3 class="functionFigure">Calculate circumference</h3>
+                        <div><input type="number" id="circumferenceCircle" placeholder="diameter" class="inputGeometric">
+                            <select name="measure" id="measureCC">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>dm</option>
+                                <option>m</option>
+                                <option>Dm</option>
+                                <option>Hm</option>
+                                <option>Km</option>
+                            </select></div>
+                        <button type="button" id="calculateCircleC" class="calculateBtn"><i class="fas fa-play"></i>
+                        </button>
+                        <div id="totalCircumferenceC"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

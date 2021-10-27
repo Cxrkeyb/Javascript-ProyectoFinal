@@ -6,12 +6,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Balsamiq Sans', cursive; }
 
-.sectionGeneral {
+.sectionGeneralLimited {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 500px; }
+
+.sectionGeneral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 .sectionUntangled {
   padding: 10px;
@@ -162,11 +168,13 @@ h1, h2, h3, h4, h5, h6 {
 .sectionCalculatorTitle {
   font-size: 32px; }
 
-.sectionGeometric {
+.geometricSections {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px; }
+  background-color: #fff8dc;
+  gap: 40px;
+  margin: 20px; }
 
 .staticFigure {
   height: 100px;
@@ -218,3 +226,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .inputGeometric {
   width: 50px; }
+
+.inputsFigure {
+  display: flex; }
+
+.geometricExplain {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff8dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  gap: 20px; }
+
+.txtExplain {
+  font-weight: 700;
+  color: red;
+  font-size: 24px; }
+
+.geometricLinear {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; }
+
+.geometricFormulaTxT {
+  text-align: center;
+  font-size: 18px;
+  width: 230px;
+  background-color: darkgrey;
+  border-radius: 20px; }
+
+.textUp {
+  border-bottom: 1px solid red;
+  margin: 0; }
+
+.formulaExplain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0; }

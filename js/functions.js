@@ -127,50 +127,94 @@ function PadRight(value, length) {
 // Funciones de área
 function squareA(){
     side = document.getElementById("areaSquare").value;
-    select = document.getElementById('measureS').value;
+    select = document.getElementById('measureAS').value;
     total = side * side;
-    
-    $("#totalAreaS").empty();
-    $("#totalAreaS").append(`<p class="totalTxt">Area = ${total + select}</p>`)
+    totalDom("#totalAreaS", "Area");
 }
 function rectangleA(){
-    bxh("areaRectangleB", "areaRectangleH", "measureR");
-    
-    $("#totalAreaR").empty();
-    $("#totalAreaR").append(`<p class="totalTxt">Area = ${total + select}</p>`)
+    getBHS("areaRectangleB", "areaRectangleH", "measureAR");
+    total = base * height;
+    totalDom("#totalAreaR", "Area");
 }
 function triangleA(){
-    bxh("areaTriangleB", "areaTriangleH", "measureT");
-
-    $("#totalAreaT").empty();
-    $("#totalAreaT").append(`<p class="totalTxt">Area = ${total + select}</p>`)
+    getBHS("areaTriangleB", "areaTriangleH", "measureAT");
+    total = ((base * height)/2);
+    totalDom("#totalAreaT", "Area");
 }
 function circleA(){
-    radius = document.getElementById("areaCircleR").value;
-    select = document.getElementById("measureC").value;
+    getRS("areaCircleR","measureAC");
 
-    total = Math.PI * Math.pow(radius, 2);
-    $("#totalAreaC").empty();
-    $("#totalAreaC").append(`<p class="totalTxt">Area = ${total.toFixed(6) + select}</p>`)
+    total = Math.PI * Math.pow(value1, 2);
+    totalDom("#totalAreaC", "Area");
 }
-// base por altura
-function bxh(baseId,heightId,selectorId){
-    base = document.getElementById(baseId).value;
-    height = document.getElementById(heightId).value;
-    select = document.getElementById(selectorId).value;
-    total = base * height;
-}
+// Funciones de perimetro
+function squareP(){
+    side = document.getElementById("perimeterSquare").value;
+    select = document.getElementById('measurePS').value;
+    total = side * 4;
 
-function scroll (){
-    $(body).animate({
-        scrollBottom:700
-    }, slow);
+    totalDom("#totalPerimeterS", "Perimeter");
+}
+function rectangleP(){
+    getBHS("perimeterRectangleB", "perimeterRectangleH","measurePR");
+    total = (2*base)+(2*height);
+
+    totalDom("#totalPerimeterR", "Perimeter");
+}
+function triangleP(){
+    sideA = Number(document.getElementById("perimeterTriangleA").value);
+    sideB = Number(document.getElementById("perimeterTriangleB").value);
+    sideC = Number(document.getElementById("perimeterTriangleC").value);
+    select = document.getElementById('measurePT').value;
+    total = sideA + sideB + sideC;
+
+    totalDom("#totalPerimeterT", "Perimeter");
+}
+function circleP(){
+    getRS("perimeterCircleR", "measurePC");
+    total = (2 * Math.PI * value1);
+
+    totalDom("#totalPerimeterC", "Perimeter");
+}
+function circleR(){
+    getRS("radiusCircle","measureRC");
+    total = (value1 / ( 2 * Math.PI))
+
+    totalDom("#totalRadiusC", "Radius")
+}
+function circleD(){
+    getRS("diameterCircle","measureDC");
+    total = 2 * value1;
+
+    totalDom("#totalDiameterC", "Diameter")
+}
+function circleC(){
+    getRS("circumferenceCircle","measureCC");
+    total = value1 * Math.PI;
+
+    totalDom("#totalCircumferenceC", "Circumference")
+}
+function totalDom(ubication, find){
+    $(ubication).empty();
+    $(ubication).append(`<p class="totalTxt">${find} = ${total + select}</p>`)
+}
+// Obtener base, altura y el selector
+function getBHS(baseGet,heightGet,selectorGet){
+    base = document.getElementById(baseGet).value;
+    height = document.getElementById(heightGet).value;
+    select = document.getElementById(selectorGet).value;
+}
+// Obtener radio y selector
+function getRS(radiusGet, selectorGet){
+    value1 = document.getElementById(radiusGet).value;
+    select = document.getElementById(selectorGet).value;
 }
 // Personajes creación de div en navbar
 function characterDiv (a){
     $.get(RaMURL, function (res, status) {
         if (status === "success") {
             if (number <= 20 & number >= 0) {
+                $(".characterContainer").empty();
                 $(".characterContainer").append(`<div class="container-character">
                 <div><img src="${res.results[number].image}" class="characterImage"></div>
                 <div class="characterName">${res.results[number].name}</div>
