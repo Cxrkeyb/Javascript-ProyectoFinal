@@ -1,0 +1,40 @@
+.temperatureFormulaTxT{
+    text-align: center;
+    font-size: 18px;
+    width: 320px;
+    background-color: darkgrey;
+    border-radius: 20px;
+}
+.convertionsSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #9370d8;
+    border-radius: 20px;
+    padding: 5px;
+    width: 1030px;
+    margin-bottom: 20px;
+}
+.convertionGet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px;
+    gap: 5px;
+}
+.convertionInput{
+    width: 250px;
+    height: 20px;
+    color: gray;
+}
+.convertionSelector{
+    width: 100px;
+    background-color: antiquewhite;
+    height: 30px;
+}
+.convertionTitle{
+    font-size: 30px;
+}
