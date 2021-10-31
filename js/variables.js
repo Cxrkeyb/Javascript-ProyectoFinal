@@ -48,6 +48,9 @@ let btn_radiusC = document.getElementById("calculateCircleR");
 let btn_diameterC = document.getElementById("calculateCircleD");
 let btn_circumferenceC = document.getElementById("calculateCircleC");
 
+// Variables of temperature convertions
+let btn_temperature = document.getElementById("calculateTemperature");
+
 // Creando variables de texto
 let paragraph = document.createElement("p");
 

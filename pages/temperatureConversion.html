@@ -101,22 +101,23 @@
     </div>
         <div id="convertions" class="convertionsSection">
                 <h2 class="convertionTitle">Get your convertion here</h2>
-                <input type="number" placeholder="Type the measure" id="value1" class="convertionInput">
+                <input type="number" placeholder="Type the measure" id="temperatureValue" class="convertionInput">
                 <div class="convertionGet"> 
-                <select name="temperature" id="temperature" class="convertionSelector">
+                <select name="temperature" id="temperatureInitial" class="convertionSelector">
                     <option>Farenheit</option>
                     <option>Celcius</option>
                     <option>Kelvin</option>
                 </select>
                 <span>to</span>
-                <select name="toTemperature" id="toMeasure" class="convertionSelector">
+                <select name="toTemperature" id="temperatureFinal" class="convertionSelector">
                     <option>Farenheit</option>
                     <option>Celcius</option>
                     <option>Kelvin</option>
                 </select>
             </div>
-            <button type="button" id="calculateSquareA" class="calculateBtn"><i class="fas fa-play"></i>
+            <button type="button" id="calculateTemperature" class="calculateBtn"><i class="fas fa-play"></i>
             </button>
+            <div id="finalTemperature"></div>
         </div>
     </div>
     <footer class="footerFlex">
@@ -130,6 +131,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/variables.js"></script>
     <script src="../js/functions.js"></script>
-    <script src="../js/tomeasure.js"></script>
+    <script src="../js/temperatureConvertion.js"></script>
     <script src="../js/nav.js"></script>
 </body>

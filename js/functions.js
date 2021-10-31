@@ -97,6 +97,7 @@ function valueBefore(){
 // Funciones de cambios de medidas
 function measureMeters(){
     metering = ["mm", "cm", "dm", "m", "Dm", "Hm", "Km"];
+    get3ID("valor1", "measure", "toMeasure");
     number1 = parseFloat(document.getElementById('valor1').value)
     select1 = document.getElementById('measure').value;
     select2 = document.getElementById('toMeasure').value;
@@ -126,89 +127,127 @@ function PadRight(value, length) {
 
 // Funciones de área
 function squareA(){
-    side = document.getElementById("areaSquare").value;
-    select = document.getElementById('measureAS').value;
-    total = side * side;
+    get2ID("areaSquare", "measureAS");
+    total = value1 * value1;
     totalDom("#totalAreaS", "Area");
 }
 function rectangleA(){
-    getBHS("areaRectangleB", "areaRectangleH", "measureAR");
-    total = base * height;
+    get3ID("areaRectangleB", "areaRectangleH", "measureAR");
+    total = value1 * value2;
     totalDom("#totalAreaR", "Area");
 }
 function triangleA(){
-    getBHS("areaTriangleB", "areaTriangleH", "measureAT");
-    total = ((base * height)/2);
+    get3ID("areaTriangleB", "areaTriangleH", "measureAT");
+    total = ((value1 * value2)/2);
     totalDom("#totalAreaT", "Area");
 }
 function circleA(){
-    getRS("areaCircleR","measureAC");
+    get2ID("areaCircleR","measureAC");
 
     total = Math.PI * Math.pow(value1, 2);
     totalDom("#totalAreaC", "Area");
 }
 // Funciones de perimetro
 function squareP(){
-    side = document.getElementById("perimeterSquare").value;
-    select = document.getElementById('measurePS').value;
-    total = side * 4;
+    get2ID("perimeterSquare", "measurePS")
+    total = value1 * 4;
 
     totalDom("#totalPerimeterS", "Perimeter");
 }
 function rectangleP(){
-    getBHS("perimeterRectangleB", "perimeterRectangleH","measurePR");
-    total = (2*base)+(2*height);
+    get3ID("perimeterRectangleB", "perimeterRectangleH","measurePR");
+    total = (2*value1)+(2*value2);
 
     totalDom("#totalPerimeterR", "Perimeter");
 }
 function triangleP(){
-    sideA = Number(document.getElementById("perimeterTriangleA").value);
-    sideB = Number(document.getElementById("perimeterTriangleB").value);
-    sideC = Number(document.getElementById("perimeterTriangleC").value);
-    select = document.getElementById('measurePT').value;
-    total = sideA + sideB + sideC;
+    get4ID("perimeterTriangleA", "perimeterTriangleB", "perimeterTriangleC", "measurePT")
+    total = value1 + value2 + value3;
 
     totalDom("#totalPerimeterT", "Perimeter");
 }
 function circleP(){
-    getRS("perimeterCircleR", "measurePC");
+    get2ID("perimeterCircleR", "measurePC");
     total = (2 * Math.PI * value1);
 
     totalDom("#totalPerimeterC", "Perimeter");
 }
+// Funciones de radio, diametro y circunfenrencia (Circulo)
 function circleR(){
-    getRS("radiusCircle","measureRC");
+    get2ID("radiusCircle","measureRC");
     total = (value1 / ( 2 * Math.PI))
 
     totalDom("#totalRadiusC", "Radius")
 }
 function circleD(){
-    getRS("diameterCircle","measureDC");
+    get2ID("diameterCircle","measureDC");
     total = 2 * value1;
 
     totalDom("#totalDiameterC", "Diameter")
 }
 function circleC(){
-    getRS("circumferenceCircle","measureCC");
+    get2ID("circumferenceCircle","measureCC");
     total = value1 * Math.PI;
 
     totalDom("#totalCircumferenceC", "Circumference")
 }
+// Añadir al texto dom el resultado
 function totalDom(ubication, find){
     $(ubication).empty();
-    $(ubication).append(`<p class="totalTxt">${find} = ${total + select}</p>`)
+    $(ubication).append(`<p class="totalTxt">${find} = ${total + valueSelectorTo}</p>`)
 }
-// Obtener base, altura y el selector
-function getBHS(baseGet,heightGet,selectorGet){
-    base = document.getElementById(baseGet).value;
-    height = document.getElementById(heightGet).value;
-    select = document.getElementById(selectorGet).value;
+// Obtener dos valores de Id del dom
+function get2ID(firstElementId, secondElementId){
+    value1 = Number(document.getElementById(firstElementId).value);
+    valueSelectorTo = document.getElementById(secondElementId).value;
 }
-// Obtener radio y selector
-function getRS(radiusGet, selectorGet){
-    value1 = document.getElementById(radiusGet).value;
-    select = document.getElementById(selectorGet).value;
+// Obtener tres valores de Id del dom
+function get3ID(firstElementId,secondElementId,thirdElementId){
+    value1 = document.getElementById(firstElementId).value;
+    value2 = document.getElementById(secondElementId).value;
+    valueSelectorTo = document.getElementById(thirdElementId).value;
 }
+function get4ID(firstElementId,secondElementId,thirdElementId,fourthElementId){
+    value1 = Number(document.getElementById(firstElementId).value);
+    value2 = Number(document.getElementById(secondElementId).value);
+    value3 = Number(document.getElementById(thirdElementId).value);
+    valueSelectorTo = document.getElementById(fourthElementId).value;
+}
+
+
+// Temperaturas
+function temperatureConversor(){
+    get3ID("temperatureValue", "temperatureInitial", "temperatureFinal");
+    if(valueSelectorTo === "Farenheit"){
+        if (value2 === "Kelvin"){
+            total = ((9*(value1 - 273.15))/5)+32;
+        }
+        else if (value2 === "Celcius"){
+            total = ((9*value1)/5)+32;
+        }
+        totalDom("#finalTemperature", "Farenheit")
+    }
+    else if(valueSelectorTo === "Celcius"){
+        if (value2 === "Kelvin"){
+            total = ((9*(value1 - 273.15))/5)+32;
+        }
+        else if (value2 === "Farenheit"){
+            total = (5*(value1 - 32))/9;
+        }
+        totalDom("#finalTemperature", "Celcius")
+    }
+    else if(valueSelectorTo === "Kelvin"){
+        if (value2 === "Celcius"){
+            value1 = Number(value1);
+            total = value1 + 273.15;
+        }
+        else if (value2 === "Farenheit"){
+            total = ((5*(value1 - 32))/9)+273.15;
+        }
+        totalDom("#finalTemperature", "Kelvin")
+    }
+}
+
 // Personajes creación de div en navbar
 function characterDiv (a){
     $.get(RaMURL, function (res, status) {
