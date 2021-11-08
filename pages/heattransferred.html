@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untangled</title>
+    <!-- Linkear css -->
+    <link href="../css/style.css" rel="stylesheet" title="Main Style">
+    <!-- Linkear google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Catamaran:wght@100;200;300;400;500&family=Josefin+Sans:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- linkear iconos fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navFlex">
+            <div class="navLogo">
+                <img src="../assets/img/logo.png" class="logoNav">
+            </div>
+            <div class="navLinks">
+                <a href="../index.html">
+                    <h2>Home</h2>
+                </a>
+                </a><a href="">
+                    <h2>FAQ</h2>
+                </a>
+            </div>
+            <div class="navUser">Type a number between<input type="number" placeholder="0-20" id="name"><button
+                    type="button" id="character">Send</button></div>
+            <div class="characterContainer">
+            </div>
+        </nav>
+    </header>
+    <div class="sectionGeneral">
+        <div class="geometricSections">
+            <div class="geometricExplain">
+                <h2>Heat transferred</h2>
+                <p>Heat transfer is the process of heat propagation in different media. The part of physics that studies
+                    these processes is in turn called heat transfer or heat transmission or heat transfer.
+
+                </p>
+                <div class="calculateContainer">
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain"> Heat transferred formula</h3>
+                        <div class="formulaContainer">
+                            <span class="txtExplain">Q = </span>m<span class="txtExplain">.</span>c<span
+                                class="txtExplain">.</span>Δt
+                        </div>
+                        <div class="calculateFormula" id="rectangleCardA">
+                            <h3 class="functionFigure">Calculate Heat transferred</h3>
+                            <div><input type="number" id="perimeterRectangleB" placeholder="xf" class="inputGeometric">
+                                <input type="number" id="perimeterRectangleH" placeholder="xo" class="inputGeometric">
+                                <select name="measure" id="measurePR">
+                                    <option>mm</option>
+                                    <option>cm</option>
+                                    <option>dm</option>
+                                    <option>m</option>
+                                    <option>Dm</option>
+                                    <option>Hm</option>
+                                    <option>Km</option>
+                                </select></div>
+                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="totalPerimeterR"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Mass formula</h3>
+                        <div class="formulaContainer">
+                            <span class="txtExplain">m = </span>
+                            <div class="formulaDominator">
+                                <div class="textUp">Q</div>
+                                <div><span>c<span class="txtExplain">.</span>Δt</span></div>
+                            </div>
+                        </div>
+                        <div class="calculateFormula" id="rectangleCardA">
+                            <h3 class="functionFigure">Calculate distance</h3>
+                            <div><input type="number" id="perimeterRectangleB" placeholder="speed"
+                                    class="inputGeometric">
+                                <input type="number" id="perimeterRectangleH" placeholder="time" class="inputGeometric">
+                                <select name="measure" id="measurePR">
+                                    <option>mm</option>
+                                    <option>cm</option>
+                                    <option>dm</option>
+                                    <option>m</option>
+                                    <option>Dm</option>
+                                    <option>Hm</option>
+                                    <option>Km</option>
+                                </select></div>
+                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="totalPerimeterR"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Specific heat formula</h3>
+                        <div class="formulaContainer">
+                            <span class="txtExplain">c = </span>
+                            <div class="formulaDominator">
+                                <div class="textUp">Q</div>
+                                <div><span>m<span class="txtExplain">.</span>Δt</span></span></div>
+                            </div>
+                        </div>
+                        <div class="calculateFormula" id="rectangleCardA">
+                            <h3 class="functionFigure">Calculate keystroke with Period</h3>
+                            <div><input type="number" id="perimeterRectangleB" placeholder="distance"
+                                    class="inputGeometric">
+                                <input type="number" id="perimeterRectangleH" placeholder="speed"
+                                    class="inputGeometric">
+                                <select name="measure" id="measurePR">
+                                    <option>mm</option>
+                                    <option>cm</option>
+                                    <option>dm</option>
+                                    <option>m</option>
+                                    <option>Dm</option>
+                                    <option>Hm</option>
+                                    <option>Km</option>
+                                </select></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Temperature variation formula</h3>
+                        <div class="formulaContainer">
+                            <span class="txtExplain">Δt = </span>
+                            <div class="formulaDominator">
+                                <div class="textUp">Q</div>
+                                <div><span>m <span class="txtExplain">.</span>c</span></div>
+                            </div>
+                        </div>
+                        <div class="formulaContainer">
+                            <span class="txtExplain">Δt =</span> Tf <span class="txtExplain">-</span>Ti
+                        </div>
+                        <div class="calculateFormula" id="rectangleCardA">
+                            <h3 class="functionFigure">Calculate period</h3>
+                            <div><input type="number" id="perimeterRectangleB" placeholder="distance"
+                                    class="inputGeometric">
+                                <input type="number" id="perimeterRectangleH" placeholder="time" class="inputGeometric">
+                                <select name="measure" id="measurePR">
+                                    <option>mm</option>
+                                    <option>cm</option>
+                                    <option>dm</option>
+                                    <option>m</option>
+                                    <option>Dm</option>
+                                    <option>Hm</option>
+                                    <option>Km</option>
+                                </select></div>
+                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="totalPerimeterR"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaData">
+                        <h2>Data</h2>
+                        <p><span class="txtExplain">Q =</span> Heat transferred <span class="txtExplain">Tf =</span>
+                            Final temperature</p>
+                        <p><span class="txtExplain">m =</span> mass <span class="txtExplain">Ti =</span> Initial
+                            temperature</p>
+                        <p><span class="txtExplain">Δt =</span> Temperature Variation<span class="txtExplain">c =</span>
+                            Specific heat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footerFlex">
+        <a>
+            <h5>Contact us</h2>
+        </a>
+        <a>
+            <h5>Social Media</h5>
+        </a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/variables.js"></script>
+</body>
+</html>

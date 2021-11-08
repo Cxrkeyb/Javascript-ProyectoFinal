@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untangled</title>
+    <!-- Linkear css -->
+    <link href="../css/style.css" rel="stylesheet" title="Main Style">
+    <!-- Linkear google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Catamaran:wght@100;200;300;400;500&family=Josefin+Sans:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- linkear iconos fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navFlex">
+            <div class="navLogo">
+                <img src="../assets/img/logo.png" class="logoNav">
+            </div>
+            <div class="navLinks">
+                <a href="../index.html">
+                    <h2>Home</h2>
+                </a>
+                </a><a href="">
+                    <h2>FAQ</h2>
+                </a>
+            </div>
+            <div class="navUser">Type a number between<input type="number" placeholder="0-20" id="name"><button
+                    type="button" id="character">Send</button></div>
+            <div class="characterContainer">
+            </div>
+        </nav>
+    </header>
+    <div class="sectionGeneral">
+        <div class="geometricSections">
+            <div class="geometricExplain">
+                <h2>Interest</h2>
+                <p>Simple interest is interest, which is charged at the end of a one-year period and is expressed as X%
+                    per year. In addition, simple interest is always calculated on the original principal amount, i.e.,
+                    if the debtor is late in paying interest, the principal is not increased by the unpaid interest.
+                </p>
+                <div class="calculateContainer">
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Simple Interest</h3>
+                            <div class="formulaContainer">
+                                <span class="txtExplain">Cf =</span> C<span class="txtExplain">(</span>1 <span
+                                class="txtExplain">+</span>
+                                <div class="formulaDominator">
+                                    <div class="textUp">r</div>
+                                    <div><span>100</span></div>
+                                </div>
+                                t
+                                <span class="txtExplain">)</span>
+                            </div>
+                        <div class="calculateFormula" id="rectangleCardA">
+                            <h3 class="functionFigure">Calculate Simple Interest</h3>
+                            <div><input type="number" id="initialCapitalSI" placeholder="Ci" class="inputGeometric">
+                                <input type="number" id="interestrateSI" placeholder="r" class="inputGeometric">
+                                <input type="number" id="periodSI" placeholder="t" class="inputGeometric"></div>
+                            <button type="button" id="calculateSI" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="calculatedSI"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Composed Interes</h3>
+                        <div class="formulaContainer">
+                            <span class="txtExplain">Cf =</span> C<span class="txtExplain">(</span>1 <span
+                            class="txtExplain">+</span>
+                            <div>
+                                <div class="textUp">r</div>
+                                <div><span>100</span></div>
+                            </div>
+                            <span class="txtExplain">)</span>
+                            <sup class="supNumber">t</sup>
+                        </div>
+                        <div class="calculateFormula" id="rectangleCardA">
+                            <h3 class="functionFigure">Calculate composed interest</h3>
+                            <div><input type="number" id="initialCapitalCI" placeholder="Ci" class="inputGeometric">
+                                <input type="number" id="interestrateCI" placeholder="r" class="inputGeometric">
+                                <input type="number" id="periodCI" placeholder="t" class="inputGeometric"></div>
+                            <button type="button" id="calculateCI" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="calculatedCI"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaData">
+                            <h2>Data</h2>
+                            <p><span class="txtExplain">Cf =</span> Final Capital <span class="txtExplain">Ci =</span> Initial Capital</p>
+                            <p><span class="txtExplain">r =</span>  interest rate <span class="txtExplain">t =</span> savings period in years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footerFlex">
+        <a>
+            <h5>Contact us</h2>
+        </a>
+        <a>
+            <h5>Social Media</h5>
+        </a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/variables.js"></script>
+</body>
+</html>

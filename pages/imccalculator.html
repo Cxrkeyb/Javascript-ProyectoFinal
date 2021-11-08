@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untangled</title>
+    <!-- Linkear css -->
+    <link href="../css/style.css" rel="stylesheet" title="Main Style">
+    <!-- Linkear google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Catamaran:wght@100;200;300;400;500&family=Josefin+Sans:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- linkear iconos fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navFlex">
+            <div class="navLogo">
+                <img src="../assets/img/logo.png" class="logoNav">
+            </div>
+            <div class="navLinks">
+                <a href="../index.html">
+                    <h2>Home</h2>
+                </a>
+                </a><a href="">
+                    <h2>FAQ</h2>
+                </a>
+            </div>
+            <div class="navUser">Type a number between<input type="number" placeholder="0-20" id="name"><button
+                    type="button" id="character">Send</button></div>
+            <div class="characterContainer">
+            </div>
+        </nav>
+    </header>
+    <div class="sectionGeneral">
+        <div class="geometricSections">
+            <div class="geometricExplain">
+                <h2 class="sectionCalculatorTitle">BMI Calculator</h2>
+                <p class="sectionCalculatorParagraph">This calculator provides BMI and the corresponding BMI weight
+                    level category. Use it for adults 20 years of age and older.</p>
+                <div class="geometricLinear">
+                    <div class="temperatureFormulaTxT">
+                        <h3 class="titleExplain">Get BMI</h3>
+                        <div class="formulaExplain">
+                            <p><span class="txtExplain">BMI =</span>
+                                <div>
+                                    <div class="textUp"></span> Weight</span></div>
+                                    <div><span>Height<sup>2</sup></span></div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableBMI">
+                    <div class="tableBMIValues">
+                        <div><h3>BMI</h3></div>
+                        <div>Under 18.5</div>
+                        <div>18.5-24.9</div>
+                        <div>25.0-29.9</div>
+                        <div>30.0 or more</div>
+                    </div>
+                    <div class="tableBMIValues">
+                        <div><h3>Weight Level</h3></div>
+                        <div>Underweight</div>
+                        <div>Normal</div>
+                        <div>Overweight</div>
+                        <div>Obesity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="convertions" class="convertionsSection">
+            <h2 class="convertionTitle">Get your BMI here</h2>
+            <div class="convertionGet">
+                <input type="number" placeholder="Type your weight (Kgs)" id="weightValue" class="convertionInput">
+                <a href="#" class="relink">Don't know your weight in kgs?</a>
+            </div>
+            <div class="convertionGet">
+                <input type="number" placeholder="Type your height (meters)" id="heightValue" class="convertionInput">
+                <a href="measures.html" class="relink">Don't know your height in meters?</a>
+            </div>
+            <button type="button" id="calculateBMI" class="calculateBtn"><i class="fas fa-play"></i>
+            </button>
+            <div id="calculatedBMI"></div>
+        </div>
+    </div>
+    <footer class="footerFlex">
+        <a>
+            <h5>Contact us</h2>
+        </a>
+        <a>
+            <h5>Social Media</h5>
+        </a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/variables.js"></script>
+</body>
+</html>

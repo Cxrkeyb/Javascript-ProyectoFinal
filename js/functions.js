@@ -129,93 +129,69 @@ function PadRight(value, length) {
 function squareA(){
     get2ID("areaSquare", "measureAS");
     total = value1 * value1;
-    totalDom("#totalAreaS", "Area");
+    totalDom("#totalAreaS", "Area", valueSelectorTo);
 }
 function rectangleA(){
     get3ID("areaRectangleB", "areaRectangleH", "measureAR");
     total = value1 * value2;
-    totalDom("#totalAreaR", "Area");
+    totalDom("#totalAreaR", "Area", valueSelectorTo);
 }
 function triangleA(){
     get3ID("areaTriangleB", "areaTriangleH", "measureAT");
     total = ((value1 * value2)/2);
-    totalDom("#totalAreaT", "Area");
+    totalDom("#totalAreaT", "Area", valueSelectorTo);
 }
 function circleA(){
     get2ID("areaCircleR","measureAC");
 
     total = Math.PI * Math.pow(value1, 2);
-    totalDom("#totalAreaC", "Area");
+    totalDom("#totalAreaC", "Area", valueSelectorTo);
 }
 // Funciones de perimetro
 function squareP(){
     get2ID("perimeterSquare", "measurePS")
     total = value1 * 4;
 
-    totalDom("#totalPerimeterS", "Perimeter");
+    totalDom("#totalPerimeterS", "Perimeter", valueSelectorTo);
 }
 function rectangleP(){
     get3ID("perimeterRectangleB", "perimeterRectangleH","measurePR");
     total = (2*value1)+(2*value2);
 
-    totalDom("#totalPerimeterR", "Perimeter");
+    totalDom("#totalPerimeterR", "Perimeter", valueSelectorTo);
 }
 function triangleP(){
     get4ID("perimeterTriangleA", "perimeterTriangleB", "perimeterTriangleC", "measurePT")
     total = value1 + value2 + value3;
 
-    totalDom("#totalPerimeterT", "Perimeter");
+    totalDom("#totalPerimeterT", "Perimeter", valueSelectorTo);
 }
 function circleP(){
     get2ID("perimeterCircleR", "measurePC");
     total = (2 * Math.PI * value1);
 
-    totalDom("#totalPerimeterC", "Perimeter");
+    totalDom("#totalPerimeterC", "Perimeter", valueSelectorTo);
 }
 // Funciones de radio, diametro y circunfenrencia (Circulo)
 function circleR(){
     get2ID("radiusCircle","measureRC");
     total = (value1 / ( 2 * Math.PI))
 
-    totalDom("#totalRadiusC", "Radius")
+    totalDom("#totalRadiusC", "Radius", valueSelectorTo)
 }
 function circleD(){
     get2ID("diameterCircle","measureDC");
     total = 2 * value1;
 
-    totalDom("#totalDiameterC", "Diameter")
+    totalDom("#totalDiameterC", "Diameter", valueSelectorTo)
 }
 function circleC(){
     get2ID("circumferenceCircle","measureCC");
     total = value1 * Math.PI;
 
-    totalDom("#totalCircumferenceC", "Circumference")
+    totalDom("#totalCircumferenceC", "Circumference", valueSelectorTo)
 }
-// Añadir al texto dom el resultado
-function totalDom(ubication, find){
-    $(ubication).empty();
-    $(ubication).append(`<p class="totalTxt">${find} = ${total + valueSelectorTo}</p>`)
-}
-// Obtener dos valores de Id del dom
-function get2ID(firstElementId, secondElementId){
-    value1 = Number(document.getElementById(firstElementId).value);
-    valueSelectorTo = document.getElementById(secondElementId).value;
-}
-// Obtener tres valores de Id del dom
-function get3ID(firstElementId,secondElementId,thirdElementId){
-    value1 = document.getElementById(firstElementId).value;
-    value2 = document.getElementById(secondElementId).value;
-    valueSelectorTo = document.getElementById(thirdElementId).value;
-}
-function get4ID(firstElementId,secondElementId,thirdElementId,fourthElementId){
-    value1 = Number(document.getElementById(firstElementId).value);
-    value2 = Number(document.getElementById(secondElementId).value);
-    value3 = Number(document.getElementById(thirdElementId).value);
-    valueSelectorTo = document.getElementById(fourthElementId).value;
-}
-
-
-// Temperaturas
+// Conversor de Temperaturas
 function temperatureConversor(){
     get3ID("temperatureValue", "temperatureInitial", "temperatureFinal");
     if(valueSelectorTo === "Farenheit"){
@@ -247,7 +223,83 @@ function temperatureConversor(){
         totalDom("#finalTemperature", "Kelvin")
     }
 }
-
+// Calcular IMC de la persona
+function IMCCalculator(){
+    get2ID("weightValue", "heightValue");
+    total = (value1 / (Math.pow(valueSelectorTo, 2))).toFixed(2);
+    if(total < 18.5){
+        totalDom("#calculatedBMI", "Underweight", "BMI")
+    }else{
+        if(total >= 18.5 && 24.9 <= total){
+            totalDom("#calculatedBMI", "Normal", "BMI")
+        }
+        if(total >= 25 && 29.9 <= total){
+            totalDom("#calculatedBMI", "Overweight", "BMI")
+        }
+        if(total >= 30.0 ){
+            totalDom("#calculatedBMI", "Obesity", "BMI")
+        }
+    }
+}
+// MRU Operaciones
+function mruDisplacement(){
+    get2ID("mrudisfinalD", "mrudisinitialD");
+    total = valueSelectorTo - value1;
+    totalDom("#dispCalculatedMru", "Displacement", "m")
+}
+function mruDistance(){
+    get2ID("mruspeedD", "mrutimeD");
+    total = value1 * valueSelectorTo;
+    totalDom("#distCalculatedMru", "Distance", "m");
+}
+function mruTime(){
+    get2ID("mrudistanceT", "mruspeedT");
+    total = value1 / valueSelectorTo;
+    totalDom("#timeCalculatedMru", "Time", "s");
+}
+function mruSpeed(){
+    get2ID("mrudistanceS", "mrutimeS");
+    total = value1 / valueSelectorTo;
+    totalDom("#speedCalculatedMru", "Speed", "m/s")
+}
+function mruAverageS(){
+    get2ID("mrudispAS", "mrutimeAS");
+    total = value1 / valueSelectorTo;
+    totalDom("#averagespeedCalculatedMru", "Average speed", "m/s")
+}
+// Calculate Interest
+function simpleInterest(){
+    get3ID("initialCapitalSI", "interestrateSI", "periodSI");
+    total = (value1 * (1+(value2/100)*valueSelectorTo)).toFixed(2);
+    totalDom("#calculatedSI", "Simple Interest", "$")
+}
+function composedInterest(){
+    get3ID("initialCapitalCI", "interestrateCI", "periodCI");
+    total = (value1 * (1 + Math.pow((value2/100), valueSelectorTo))).toFixed(2);
+    totalDom("#calculatedCI", "Composed Interest", "$")
+}
+// Añadir al texto dom el resultado
+function totalDom(ubication, find, measure){
+    $(ubication).empty();
+    $(ubication).append(`<p class="totalTxt">${find} = ${total} ${measure}</p>`)
+}
+// Obtener dos valores de Id del dom
+function get2ID(firstElementId, secondElementId){
+    value1 = Number(document.getElementById(firstElementId).value);
+    valueSelectorTo = document.getElementById(secondElementId).value;
+}
+// Obtener tres valores de Id del dom
+function get3ID(firstElementId,secondElementId,thirdElementId){
+    value1 = (document.getElementById(firstElementId).value);
+    value2 = document.getElementById(secondElementId).value;
+    valueSelectorTo = document.getElementById(thirdElementId).value;
+}
+function get4ID(firstElementId,secondElementId,thirdElementId,fourthElementId){
+    value1 = Number(document.getElementById(firstElementId).value);
+    value2 = Number(document.getElementById(secondElementId).value);
+    value3 = Number(document.getElementById(thirdElementId).value);
+    valueSelectorTo = document.getElementById(fourthElementId).value;
+}
 // Personajes creación de div en navbar
 function characterDiv (a){
     $.get(RaMURL, function (res, status) {

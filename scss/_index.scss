@@ -1,6 +1,6 @@
 .sectionUntangled{
     padding: 10px;
-    margin: 5px;
+    background: lightsteelblue;
 }
 .sectionUntangledText{
 	text-align: center;
@@ -13,7 +13,6 @@
 	height: 60px;
 	width: 170px;
 	border-radius: 4px;
-	background-color: transparent;
 	border: 2px solid black;
 	padding: 5px;
 }
@@ -36,6 +35,7 @@
 .cardTextSize{
 	font-size: 18px;
 	width: 120px;
+	font-weight: 700;
 }
 .cardLink{
 	text-decoration: none;

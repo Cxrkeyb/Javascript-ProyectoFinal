@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untangled</title>
+    <!-- Linkear css -->
+    <link href="../css/style.css" rel="stylesheet" title="Main Style">
+    <!-- Linkear google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Catamaran:wght@100;200;300;400;500&family=Josefin+Sans:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- linkear iconos fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navFlex">
+            <div class="navLogo">
+                <img src="../assets/img/logo.png" class="logoNav">
+            </div>
+            <div class="navLinks">
+                <a href="../index.html">
+                    <h2>Home</h2>
+                </a>
+                </a><a href="">
+                    <h2>FAQ</h2>
+                </a>
+            </div>
+            <div class="navUser">Type a number between<input type="number" placeholder="0-20" id="name"><button
+                    type="button" id="character">Send</button></div>
+            <div class="characterContainer">
+            </div>
+        </nav>
+    </header>
+    <div class="sectionGeneral">
+        <div class="geometricSections">
+            <div class="geometricExplain">
+                <h2>M.R.U.</h2>
+                <p>Uniform rectilinear motion (M.R.U.) describes the displacement of an object in a single direction
+                    with a constant speed and time over a certain distance. In physics, uniform rectilinear motion can
+                    be observed within a plane, on a coordinate axis, where the motion is in a straight line moving in
+                    one direction. It is uniform because the speed and time variables on the line are constant.
+                </p>
+                <div class="calculateContainer">
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Displacement formula</h3>
+                        <p><span class="txtExplain">Δx =</span> x(final) <span class="txtExplain">-</span>x(inicial)</p>
+                        <div class="calculateFormula">
+                            <h3 class="functionFigure">Calculate displacement in meters</h3>
+                            <div>
+                                <input type="number" id="mrudisfinalD" placeholder="xf" class="inputGeometric">
+                                <input type="number" id="mrudisinitialD" placeholder="xo" class="inputGeometric">
+                            </div>
+                            <a href="measures.html" class="relinkcalculate">Don't know the displacement in meters?</a>
+                            <button type="button" id="calculateDispMRU" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="dispCalculatedMru"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Distance formula</h3>
+                        <p><span class="txtExplain">d = </span>v<span class="txtExplain">.</span> t <span
+                                class="txtExplain"></p>
+                        <div class="calculateFormula">
+                            <h3 class="functionFigure">Calculate distance</h3>
+                            <div><input type="number" id="mruspeedD" placeholder="speed"
+                                    class="inputGeometric">
+                                <input type="number" id="mrutimeD" placeholder="time" class="inputGeometric"></div>
+                            <button type="button" id="calculateDistanceMRU" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="distCalculatedMru"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Time formula</h3>
+                        <p>
+                            <span class="txtExplain">t =</span> d <span class="txtExplain">/</span> v
+                        </p>
+                        <div class="calculateFormula">
+                            <h3 class="functionFigure">Calculate time</h3>
+                            <div><input type="number" id="mrudistanceT" placeholder="distance"
+                                    class="inputGeometric">
+                                <input type="number" id="mruspeedT" placeholder="speed"
+                                    class="inputGeometric"></div>
+                            <button type="button" id="calculateTimeMRU" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="timeCalculatedMru"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Speed formula</h3>
+                        <p><span class="txtExplain">v =</span> d <span class="txtExplain">/</span> t
+                        </p>
+                        <div class="calculateFormula">
+                            <h3 class="functionFigure">Calculate speed</h3>
+                            <div><input type="number" id="mrudistanceS" placeholder="distance"
+                                    class="inputGeometric">
+                                <input type="number" id="mrutimeS" placeholder="time" class="inputGeometric"></div>
+                            <button type="button" id="calculateSpeedMRU" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="speedCalculatedMru"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain">Average speed formula</h3>
+                        <p><span class="txtExplain">V(av) =</span> Δx <span class="txtExplain">/</span> t
+                        </p>
+                        <div class="calculateFormula">
+                            <h3 class="functionFigure">Calculate average speed</h3>
+                            <div><input type="number" id="mrudispAS" placeholder="displacement"
+                                    class="inputGeometric">
+                                <input type="number" id="mrutimeAS" placeholder="time" class="inputGeometric"></div>
+                            <button type="button" id="calculateAverageSpeedMRU" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="averagespeedCalculatedMru"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaData">
+                        <h2>Data</h2>
+                        <p><span class="txtExplain">v =</span> Speed in m/s <span class="txtExplain">d =</span> Distance in metters</p>
+                        <p><span class="txtExplain">V(av) =</span> Average speed  <span class="txtExplain">Vp =</span> propagating speed</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footerFlex">
+        <a>
+            <h5>Contact us</h2>
+        </a>
+        <a>
+            <h5>Social Media</h5>
+        </a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/variables.js"></script>
+</body>
+</html>

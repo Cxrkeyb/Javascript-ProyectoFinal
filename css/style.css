@@ -19,9 +19,85 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-direction: column; }
 
+.relink {
+  color: black;
+  font-weight: 600;
+  background: white;
+  padding: 0.2vw;
+  border-radius: 10px; }
+
+.relinkcalculate {
+  color: black;
+  font-weight: 600;
+  background: white;
+  padding: 0.2vw;
+  border-radius: 10px;
+  font-size: 13.5px; }
+
+.calculateContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.calculateFormulaTxT {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  width: 400px;
+  background-color: lavender;
+  border-radius: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh; }
+
+.calculateFormula {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #9370d8;
+  border-radius: 20px;
+  padding: 1vw;
+  width: 60%; }
+
+.formulaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2vw; }
+
+.supNumber {
+  padding-bottom: 1vw; }
+
+.formulaDominator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.textUp {
+  border-bottom: 1px solid red;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: center; }
+
+.calculateFormulaData {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: lavender;
+  border-radius: 20px; }
+
 .sectionUntangled {
   padding: 10px;
-  margin: 5px; }
+  background: lightsteelblue; }
 
 .sectionUntangledText {
   text-align: center; }
@@ -34,7 +110,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 60px;
   width: 170px;
   border-radius: 4px;
-  background-color: transparent;
   border: 2px solid black;
   padding: 5px; }
 
@@ -56,12 +131,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .cardTextSize {
   font-size: 18px;
-  width: 120px; }
+  width: 120px;
+  font-weight: 700; }
 
 .cardLink {
   text-decoration: none; }
 
-.navFlex {
+.navFlex, .footerFlex, .cardContentFlexMini {
   background-color: #eeeeee; }
 
 .tableInside {
@@ -70,17 +146,14 @@ h1, h2, h3, h4, h5, h6 {
 .navFlex a h2 {
   color: #161112; }
 
-.sectionGeneral {
+.sectionGeneral, .sectionUntangled, .tableBeforeValues, .tableBMIValues, .sectionGeneralLimited {
   background-color: lightsteelblue; }
-
-.tableBeforeValues {
-  background-color: lightsteelblue; }
-
-.footerFlex {
-  background-color: #eeeeee; }
 
 .cardTextSize {
   color: #9441ad; }
+
+.convertionSelector, .geometricExplain {
+  background-color: honeydew; }
 
 .logoNav {
   width: 200px; }
@@ -233,12 +306,11 @@ h1, h2, h3, h4, h5, h6 {
 .geometricExplain {
   padding: 20px;
   border-radius: 5px;
-  background-color: #fff8dc;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1200px;
+  width: 70vw;
   gap: 20px; }
 
 .txtExplain {
@@ -257,10 +329,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 230px;
   background-color: darkgrey;
   border-radius: 20px; }
-
-.textUp {
-  border-bottom: 1px solid red;
-  margin: 0; }
 
 .formulaExplain {
   display: flex;
@@ -303,8 +371,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .convertionSelector {
   width: 100px;
-  background-color: antiquewhite;
   height: 30px; }
 
 .convertionTitle {
   font-size: 30px; }
+
+.tableBMI {
+  display: flex; }
+
+.tableBMIValues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px; }
+
+.tableBMIValues div {
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 15vw;
+  height: 5vw;
+  align-items: center; }
+
+.plussubs {
+  line-height: 0.5; }

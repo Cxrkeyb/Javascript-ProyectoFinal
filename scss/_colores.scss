@@ -4,26 +4,24 @@ $titulos2: #161112;
 $cards: #9441ad;
 $bg2: lightsteelblue;
 $bgT: lightgray;
+$base: honeydew;
 
 
-.navFlex{
+.navFlex, .footerFlex, .cardContentFlexMini{
     background-color: $colorbase;
 }
 .tableInside{
-    background-color:lightgray;
+    background-color:$bgT;
 }
 .navFlex a h2{
     color: $titulos2;
 }
-.sectionGeneral{
+.sectionGeneral, .sectionUntangled, .tableBeforeValues, .tableBMIValues, .sectionGeneralLimited{
     background-color: $bg2;
-}
-.tableBeforeValues{
-    background-color: $bg2;
-}
-.footerFlex{
-    background-color: $colorbase;
 }
 .cardTextSize{
     color: $cards;
+}
+.convertionSelector,.geometricExplain{
+    background-color: $base;
 }

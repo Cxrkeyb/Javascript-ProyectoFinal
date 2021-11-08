@@ -63,12 +63,11 @@
 .geometricExplain{
     padding: 20px;
     border-radius: 5px;
-    background-color: #fff8dc;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1200px;
+    width: 70vw;
     gap: 20px;
 }
 .txtExplain{
@@ -87,10 +86,6 @@
     width: 230px;
     background-color: darkgrey;
     border-radius: 20px;
-}
-.textUp{
-    border-bottom: 1px solid red;
-    margin: 0;
 }
 .formulaExplain{
     display: flex;

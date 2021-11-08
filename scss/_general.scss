@@ -19,6 +19,82 @@ h1,h2,h3,h4,h5,h6{
     align-items: center;
     flex-direction: column;
 }
+.relink{
+    color: black;
+    font-weight: 600;
+    background: white;
+    padding: 0.2vw;
+    border-radius: 10px;
+}
+.relinkcalculate{
+    color: black;
+    font-weight: 600;
+    background: white;
+    padding: 0.2vw;
+    border-radius: 10px;
+    font-size: 13.5px;
+}
+.calculateContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.calculateFormulaTxT{
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    width: 400px;
+    background-color: lavender;
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+}
+.calculateFormula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #9370d8;
+    border-radius: 20px;
+    padding: 1vw;
+    width: 60%;
+}
+.formulaContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+.supNumber{
+    padding-bottom: 1vw;
+}
+.formulaDominator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.textUp{
+    border-bottom: 1px solid red;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+}
+.calculateFormulaData{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lavender;
+    border-radius: 20px;
+}
 // font-family: 'Balsamiq Sans', cursive;
 // font-family: 'Catamaran', sans-serif;
 // font-family: 'Josefin Sans', sans-serif;

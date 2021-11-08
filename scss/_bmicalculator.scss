@@ -1,0 +1,19 @@
+.tableBMI{
+    display: flex;
+}
+.tableBMIValues{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.tableBMIValues div{
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 15vw;
+    height: 5vw;
+    align-items: center;
+}

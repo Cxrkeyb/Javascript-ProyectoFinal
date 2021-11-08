@@ -1,1 +1,0 @@
-start.addEventListener("click", measureMeters)
