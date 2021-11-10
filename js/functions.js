@@ -1,5 +1,29 @@
 // FUNCTIONS
-//Funciones generales
+
+// Añadir al texto dom el resultado
+function totalDom(ubication, find, measure){
+    $(ubication).empty();
+    $(ubication).append(`<p class="totalTxt">${find} = ${total} ${measure}</p>`)
+}
+// Obtener dos valores de Id del dom
+function get2ID(firstElementId, secondElementId){
+    value1 = Number(document.getElementById(firstElementId).value);
+    valueSelectorTo = document.getElementById(secondElementId).value;
+}
+// Obtener tres valores de Id del dom
+function get3ID(firstElementId,secondElementId,thirdElementId){
+    value1 = (document.getElementById(firstElementId).value);
+    value2 = document.getElementById(secondElementId).value;
+    valueSelectorTo = document.getElementById(thirdElementId).value;
+}
+function get4ID(firstElementId,secondElementId,thirdElementId,fourthElementId){
+    value1 = Number(document.getElementById(firstElementId).value);
+    value2 = Number(document.getElementById(secondElementId).value);
+    value3 = Number(document.getElementById(thirdElementId).value);
+    valueSelectorTo = document.getElementById(fourthElementId).value;
+}
+
+//Funciones calcular
 function getValues(){
     number1 = parseFloat(document.getElementById('valor1').value)
     number2 = parseFloat(document.getElementById('valor2').value)
@@ -97,7 +121,30 @@ function valueBefore(){
 // Funciones de cambios de medidas
 function measureMeters(){
     metering = ["mm", "cm", "dm", "m", "Dm", "Hm", "Km"];
-    get3ID("valor1", "measure", "toMeasure");
+    number1 = parseFloat(document.getElementById('valor1').value)
+    select1 = document.getElementById('measure').value;
+    select2 = document.getElementById('toMeasure').value;
+    substraction(metering.indexOf(select1), metering.indexOf(select2))
+    if (Math.sign(total) == 1){
+        distance = PadRight(1, total+1);
+        result = number1 * distance;
+        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
+        convertions.appendChild(paragraph);
+    }
+    else if (Math.sign(total) == -1){
+        distance = PadRight(1, (total*-1)+1);
+        result = number1 / distance;
+        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
+        convertions.appendChild(paragraph);
+    }
+    else{
+        paragraph.innerHTML = `<p>There isn't a convertion ${number1} ${select1}<p>`
+        convertions.appendChild(paragraph);
+    }
+}
+// Funciones de cambios de medidas
+function measureGrams(){
+    metering = ["mg", "cg", "dg", "g", "Dg", "Hg", "Kg"];
     number1 = parseFloat(document.getElementById('valor1').value)
     select1 = document.getElementById('measure').value;
     select2 = document.getElementById('toMeasure').value;
@@ -275,30 +322,109 @@ function simpleInterest(){
 }
 function composedInterest(){
     get3ID("initialCapitalCI", "interestrateCI", "periodCI");
-    total = (value1 * (1 + Math.pow((value2/100), valueSelectorTo))).toFixed(2);
+    total = (value1 * Math.pow((1 + (value2/100), valueSelectorTo))).toFixed(2);
     totalDom("#calculatedCI", "Composed Interest", "$")
 }
-// Añadir al texto dom el resultado
-function totalDom(ubication, find, measure){
-    $(ubication).empty();
-    $(ubication).append(`<p class="totalTxt">${find} = ${total} ${measure}</p>`)
+function eqscndgrade(){
+    get3ID("aEqScndGrade", "bEqScndGrade", "cEqScndGrade");
+    pow = (Math.pow(value2, 2) - (4 * value1 * valueSelectorTo));
+    if (Math.sign(pow) == 1){
+        total = ((value2 * -1) + Math.sqrt(pow))/(2*value1);
+    }
+    else if (Math.sign(pow) == -1){
+        total = ((value2 * -1) + Math.sqrt(pow*-1))/(2*value1);
+    }
+    totalDom("#calculatedEqScndGrade", "x", "");
 }
-// Obtener dos valores de Id del dom
-function get2ID(firstElementId, secondElementId){
-    value1 = Number(document.getElementById(firstElementId).value);
-    valueSelectorTo = document.getElementById(secondElementId).value;
+function propagationsWave(){
+    get2ID("periodPropagationS", "lineardPropagationS");
+    total = Math.sqrt((value1 / valueSelectorTo));
+    totalDom("#calculatedPropagationSW", "Propagation speed", "m/s");
 }
-// Obtener tres valores de Id del dom
-function get3ID(firstElementId,secondElementId,thirdElementId){
-    value1 = (document.getElementById(firstElementId).value);
-    value2 = document.getElementById(secondElementId).value;
-    valueSelectorTo = document.getElementById(thirdElementId).value;
+function lineardWave(){
+    get2ID("kglineardW", "mlineardW");
+    total = (value1 / valueSelectorTo);
+    totalDom("#calculatedlineardW", "Propagation speed", "m/s");
 }
-function get4ID(firstElementId,secondElementId,thirdElementId,fourthElementId){
-    value1 = Number(document.getElementById(firstElementId).value);
-    value2 = Number(document.getElementById(secondElementId).value);
-    value3 = Number(document.getElementById(thirdElementId).value);
-    valueSelectorTo = document.getElementById(fourthElementId).value;
+function keystrokepWave(){
+    value1 = Number(document.getElementById("periodKeystroke").value);
+    total = ((2 * Math.PI) / value1);
+    totalDom("#calculatedkeystrokefW", "Keystroke", "J");
+}
+function keystrokefWave(){
+    value1 = Number(document.getElementById("frequencyKeystroke").value);
+    total = 2 * Math.PI * value1;
+    totalDom("#calculatedkeystrokefW", "Keystroke", "J");
+}
+function periodWave(){
+    value1 = Number(document.getElementById("periodkW").value);
+    total = (2 * Math.PI) / value1;
+    totalDom("#calculatedperiodW", "Period", "s");
+}
+function frequencyWave(){
+    value1 = Number(document.getElementById("keystrokefW").value);
+    total = value1 /  (Math.PI * 2);
+    totalDom("#calculatedfrequencykW", "Period", "s");
+}
+function wavelengthWave(){
+    get2ID("speedpwlW","periodwlW");
+    total = value1 * valueSelectorTo;
+    totalDom("#calculatedwavelenghtWave", "Wavelenght", "m");
+}
+function resultingforcemaCF(){
+    get2ID("massRS", "acelerationRS");
+    total = value1 * valueSelectorTo;
+    totalDom("#calculatedRS", "Resulting Force", "N");
+}
+function resultingforcefrCF(){
+    get2ID("froneRS", "frtwoRS");
+    total = value1 - valueSelectorTo;
+    totalDom("#calculatedRS", "Resulting Force", "N");
+}
+function resultingforceaCF(){
+    get2ID("resultingforceacelaration", "massaceleration");
+    total = value1 / valueSelectorTo;
+    totalDom("#calculatedAcelerationCF", "Aceleration", "m/s<sup>2</sup>");
+}
+function kinecticEnergy(){
+    get2ID("masskinecticE", "speedkinecticE");
+    total = 0.5 * value1 * (Math.pow(valueSelectorTo, 2));
+    totalDom("#calculatedkinecticE", "Kinectic Energy", "J");
+}
+function potentialEnergy(){
+    get3ID("masspotentiawlE", "gravitypotentalE", "heightpotentialE");
+    total = value1 * value2 * valueSelectorTo;
+    totalDom("#calculatedpotentialE", "Potential Energy", "J");
+}
+function mechanicalEnergy(){
+    get2ID("energykinecticE", "energypotentialE");
+    total = Number(value1) + Number(valueSelectorTo);
+    totalDom("#calculatedmechanicalE", "Mechanical Energy", "J")
+}
+function heattransferredHT(){
+    get3ID("masshtHT", "specificheatHT", "temperaturevariationHT");
+    total = value1 * value2 * valueSelectorTo;
+    totalDom("#calculatedheattransferredHT", "Q", "J/s");
+}
+function massHT(){
+    get3ID("heattransferredM", "specificheatM", "temperaturevariationM");
+    total = value1 / (value2 * valueSelectorTo);
+    totalDom("#calculatedMass", "Mass", "Kg");
+}
+function specificheatHT(){-
+    get3ID("heattransferredSH", "massSH", "temperaturevariationSH");
+    total = value1 / (value2 * valueSelectorTo);
+    totalDom("#calculatedSpecificHeat", "Specific Heat", "J/Kg");
+}
+function hmstemperatureVariation(){
+    get3ID("heattransferredTV", "massTV", "specificheatTV");
+    total = value1 / (value2 * valueSelectorTo);
+    totalDom("#calculatedtemperatureV", "Δt", "°C");
+}
+function tftemperatureVariation(){
+    get2ID("tFinalTV", "tInitialTV");
+    total = value1 - valueSelectorTo;
+    totalDom("#calculatedtemperatureV", "Δt", "°C");
 }
 // Personajes creación de div en navbar
 function characterDiv (a){

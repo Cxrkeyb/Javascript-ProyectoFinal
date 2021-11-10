@@ -59,21 +59,13 @@
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
                             <h3 class="functionFigure">Calculate Propagation speed</h3>
-                            <div><input type="number" id="perimeterRectangleB" placeholder="xf" class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="xo" class="inputGeometric">
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
-                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                            <div><input type="number" id="periodPropagationS" placeholder="t" class="inputGeometric">
+                                <input type="number" id="lineardPropagationS" placeholder="μ​" class="inputGeometric">
+                                </div>
+                            <button type="button" id="calculatePropagationSW" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="totalPerimeterR"></div>
+                            <div id="calculatedPropagationSW"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaTxT">
@@ -86,23 +78,14 @@
                             </div>
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
-                            <h3 class="functionFigure">Calculate distance</h3>
-                            <div><input type="number" id="perimeterRectangleB" placeholder="speed"
+                            <h3 class="functionFigure">Calculate Linear density</h3>
+                            <div><input type="number" id="kglineardW" placeholder="Kg"
                                     class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="time" class="inputGeometric">
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
-                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                                <input type="number" id="mlineardW" placeholder="m" class="inputGeometric"></div>
+                            <button type="button" id="calculatelineardW" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="totalPerimeterR"></div>
+                            <div id="calculatedlineardW"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaTxT">
@@ -119,37 +102,19 @@
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
                             <h3 class="functionFigure">Calculate keystroke with Period</h3>
-                            <div><input type="number" id="perimeterRectangleB" placeholder="distance"
-                                    class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="speed"
-                                    class="inputGeometric">
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
+                            <div>
+                                <input type="number" id="periodKeystroke" placeholder="t"
+                                    class="inputGeometric"></div>
+                                    <button type="button" id="calculatekeystroketW" class="calculateBtn"><i
+                                        class="fas fa-play"></i>
+                                </button>
                                 <h3 class="functionFigure">Calculate keystroke with Frequency</h3>
-                                <div><input type="number" id="perimeterRectangleB" placeholder="distance"
-                                    class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="speed"
-                                    class="inputGeometric">
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
-                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                                <div><input type="number" id="frequencyKeystroke" placeholder="f"
+                                    class="inputGeometric"></div>
+                            <button type="button" id="calculatekeystrokefW" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="totalPerimeterR"></div>
+                            <div id="calculatedkeystrokefW"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaTxT">
@@ -163,22 +128,12 @@
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
                             <h3 class="functionFigure">Calculate period</h3>
-                            <div><input type="number" id="perimeterRectangleB" placeholder="distance"
-                                    class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="time" class="inputGeometric">
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
-                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                            <div><input type="number" id="periodkW" placeholder="distance"
+                                    class="inputGeometric"></div>
+                            <button type="button" id="calculateperiodW" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="totalPerimeterR"></div>
+                            <div id="calculatedperiodW"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaTxT">
@@ -192,22 +147,12 @@
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
                             <h3 class="functionFigure">Calculate Frequency</h3>
-                            <div><input type="number" id="perimeterRectangleB" placeholder="displacement"
-                                    class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="time" class="inputGeometric">
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
-                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                            <div><input type="number" id="keystrokefW" placeholder="w"
+                                    class="inputGeometric"></div>
+                            <button type="button" id="calculatefrequencykW" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="totalPerimeterR"></div>
+                            <div id="calculatedfrequencykW"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaTxT">
@@ -217,24 +162,13 @@
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
                             <h3 class="functionFigure">Calculate Wavelength</h3>
-                            <div><input type="number" id="perimeterRectangleB" placeholder="displacement"
+                            <div><input type="number" id="speedpwlW" placeholder="Vp"
                                     class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="time" class="inputGeometric">
-                                
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
-                                
-                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                                <input type="number" id="periodwlW" placeholder="t" class="inputGeometric"></div>
+                            <button type="button" id="calculatewavelenghtWave" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="totalPerimeterR"></div>
+                            <div id="calculatedwavelenghtWave"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaData">

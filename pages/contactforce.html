@@ -56,22 +56,19 @@
                             <span class="txtExplain">Fr = </span>Fr1<span class="txtExplain">-</span> Fr2
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
-                            <h3 class="functionFigure">Calculate displacement</h3>
-                            <div><input type="number" id="perimeterRectangleB" placeholder="xf" class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="xo" class="inputGeometric">
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
-                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                            <h3 class="functionFigure">Calculate Resulting force with mass</h3>
+                            <div><input type="number" id="massRS" placeholder="m" class="inputGeometric">
+                                <input type="number" id="acelerationRS" placeholder="a" class="inputGeometric"></div>
+                            <button type="button" id="calculatemaRS" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="totalPerimeterR"></div>
+                            <h3 class="functionFigure">Calculate Resulting force with fr</h3>
+                            <div><input type="number" id="froneRS" placeholder="Fr1" class="inputGeometric">
+                                <input type="number" id="frtwoRS" placeholder="Fr2" class="inputGeometric"></div>
+                            <button type="button" id="calculatefrRS" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="calculatedRS"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaTxT">
@@ -83,23 +80,14 @@
                             </div>
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
-                            <h3 class="functionFigure">Calculate distance</h3>
-                            <div><input type="number" id="perimeterRectangleB" placeholder="speed"
+                            <h3 class="functionFigure">Calculate aceleration</h3>
+                            <div><input type="number" id="resultingforceacelaration" placeholder="Fr"
                                     class="inputGeometric">
-                                <input type="number" id="perimeterRectangleH" placeholder="time" class="inputGeometric">
-                                <select name="measure" id="measurePR">
-                                    <option>mm</option>
-                                    <option>cm</option>
-                                    <option>dm</option>
-                                    <option>m</option>
-                                    <option>Dm</option>
-                                    <option>Hm</option>
-                                    <option>Km</option>
-                                </select></div>
-                            <button type="button" id="calculateRectangleP" class="calculateBtn"><i
+                                <input type="number" id="massaceleration" placeholder="m" class="inputGeometric"></div>
+                            <button type="button" id="calculateaRS" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="totalPerimeterR"></div>
+                            <div id="calculatedAcelerationCF"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaData">

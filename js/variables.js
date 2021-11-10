@@ -56,6 +56,38 @@ let btn_temperature = document.getElementById("calculateTemperature");
 // Variables of BMI Calculator
 let btn_BMI = document.getElementById("calculateBMI");
 
+// Variables of EqScndGrade
+let btn_eqscndgrade = document.getElementById("calculateEqScndGrade");
+
+// Variables of waves
+let btn_propagationsW = document.getElementById("calculatePropagationSW");
+let btn_lineardW = document.getElementById("calculatelineardW");
+let btn_keystroketW = document.getElementById("calculatekeystroketW");
+let btn_keystrokefW = document.getElementById("calculatekeystrokefW");
+let btn_periodwW = document.getElementById("calculateperiodW");
+let btn_frequencywW = document.getElementById("calculatefrequencykW");
+let btn_wavelenghtW = document.getElementById("calculatewavelenghtWave");
+
+// Variables of Resultant Force
+let btn_resultingforcemaCF = document.getElementById("calculatemaRS");
+let btn_resultingforcefrCF = document.getElementById("calculatefrRS");
+let btn_resultingforceaCF = document.getElementById("calculateaRS");
+
+// Variables of Conversion mass
+let btn_conversionMass = document.getElementById("convertmass");
+
+// Variables of Energies
+let btn_kinecticE = document.getElementById("calculatekinecticE");
+let btn_potentialE = document.getElementById("calculatepotentialE");
+let btn_mechanicalE = document.getElementById("calculatemechanicalE");
+
+// Variables of heat transferred
+let btn_heattHT = document.getElementById("calculateheattransferredHT");
+let btn_massHT = document.getElementById("calculateMass");
+let btn_specifichHT = document.getElementById("calculateSpecificHeat");
+let btn_temperaturevhmsHT = document.getElementById("calculatehmsTV");
+let btn_temperaturevtf = document.getElementById("calculatetftiTV");
+
 // Creando variables de texto
 let paragraph = document.createElement("p");
 
@@ -119,4 +151,36 @@ if(file_name == "mru.html"){
 if(file_name == "interest.html"){
     btn_composedI.addEventListener("click", composedInterest);
     btn_simpleI.addEventListener("click", simpleInterest);
+}
+if (file_name == "equationscndgrade.html"){
+    btn_eqscndgrade.addEventListener("click", eqscndgrade);
+}
+if (file_name == "undolatory.html"){
+    btn_propagationsW.addEventListener("click", propagationsWave);
+    btn_lineardW.addEventListener("click", lineardWave);
+    btn_keystrokefW.addEventListener("click", keystrokefWave);
+    btn_keystroketW.addEventListener("click", keystrokepWave);
+    btn_periodwW.addEventListener("click", periodWave);
+    btn_frequencywW.addEventListener("click", frequencyWave);
+    btn_wavelenghtW.addEventListener("click", wavelengthWave)
+}
+if (file_name == "contactforce.html"){
+    btn_resultingforcefrCF.addEventListener("click", resultingforcefrCF);
+    btn_resultingforcemaCF.addEventListener("click", resultingforcemaCF);
+    btn_resultingforceaCF.addEventListener("click", resultingforceaCF)
+}
+if(file_name =="conversormass.html"){
+    btn_conversionMass.addEventListener("click", measureGrams)
+}
+if(file_name == "energies.html"){
+    btn_potentialE.addEventListener("click", potentialEnergy);
+    btn_kinecticE.addEventListener("click", kinecticEnergy);
+    btn_mechanicalE.addEventListener("click", mechanicalEnergy);
+}
+if(file_name == "heattransferred.html"){
+    btn_heattHT.addEventListener("click", heattransferredHT);
+    btn_massHT.addEventListener("click", massHT);
+    btn_specifichHT.addEventListener("click", specificheatHT);
+    btn_temperaturevhmsHT.addEventListener("click", hmstemperatureVariation);
+    btn_temperaturevtf.addEventListener("click", tftemperatureVariation);
 }
