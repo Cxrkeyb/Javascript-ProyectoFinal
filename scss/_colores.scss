@@ -13,7 +13,7 @@ $base: honeydew;
 .tableInside{
     background-color:$bgT;
 }
-.navFlex a h2{
+.navFlex a h2, footer a h5{
     color: $titulos2;
 }
 .sectionGeneral, .sectionUntangled, .tableBeforeValues, .tableBMIValues, .sectionGeneralLimited{

@@ -76,6 +76,9 @@ let btn_resultingforceaCF = document.getElementById("calculateaRS");
 // Variables of Conversion mass
 let btn_conversionMass = document.getElementById("convertmass");
 
+// Variables of Conversion volume
+let btn_conversionVolume = document.getElementById("conversionvolume");
+
 // Variables of Energies
 let btn_kinecticE = document.getElementById("calculatekinecticE");
 let btn_potentialE = document.getElementById("calculatepotentialE");
@@ -183,4 +186,7 @@ if(file_name == "heattransferred.html"){
     btn_specifichHT.addEventListener("click", specificheatHT);
     btn_temperaturevhmsHT.addEventListener("click", hmstemperatureVariation);
     btn_temperaturevtf.addEventListener("click", tftemperatureVariation);
+}
+if(file_name == "volumeconversor.html"){
+    btn_conversionVolume.addEventListener("click", convertVolume)
 }
