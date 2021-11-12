@@ -55,13 +55,19 @@ if(file_name == "mru.html"){
     btn_speedMRU.addEventListener("click", mruSpeed);
     btn_averagespeedMRU.addEventListener("click", mruAverageS);
 }
+// Eventos Interest
+// Comparar el nombre para ejecutarse
 if(file_name == "interest.html"){
     btn_composedI.addEventListener("click", composedInterest);
     btn_simpleI.addEventListener("click", simpleInterest);
 }
+// Eventos ecuacion de segundo grado
+// Comparar el nombre para ejecutarse
 if (file_name == "equationscndgrade.html"){
     btn_eqscndgrade.addEventListener("click", eqscndgrade);
 }
+// Eventos Movimiento ondulatorario
+// Comparar el nombre para ejecutarse
 if (file_name == "undolatory.html"){
     btn_propagationsW.addEventListener("click", propagationsWave);
     btn_lineardW.addEventListener("click", lineardWave);
@@ -71,19 +77,27 @@ if (file_name == "undolatory.html"){
     btn_frequencywW.addEventListener("click", frequencyWave);
     btn_wavelenghtW.addEventListener("click", wavelengthWave)
 }
+// Eventos fuerza de contacto
+// Comparar el nombre para ejecutarse
 if (file_name == "contactforce.html"){
     btn_resultingforcefrCF.addEventListener("click", resultingforcefrCF);
     btn_resultingforcemaCF.addEventListener("click", resultingforcemaCF);
     btn_resultingforceaCF.addEventListener("click", resultingforceaCF)
 }
+// Eventos conversion de masa
+// Comparar el nombre para ejecutarse
 if(file_name =="conversormass.html"){
     btn_conversionMass.addEventListener("click", measureGrams)
 }
+// Eventos energies
+// Comparar el nombre para ejecutarse
 if(file_name == "energies.html"){
     btn_potentialE.addEventListener("click", potentialEnergy);
     btn_kinecticE.addEventListener("click", kinecticEnergy);
     btn_mechanicalE.addEventListener("click", mechanicalEnergy);
 }
+// Eventos calor transferido
+// Comparar el nombre para ejecutarse
 if(file_name == "heattransferred.html"){
     btn_heattHT.addEventListener("click", heattransferredHT);
     btn_massHT.addEventListener("click", massHT);
@@ -91,9 +105,13 @@ if(file_name == "heattransferred.html"){
     btn_temperaturevhmsHT.addEventListener("click", hmstemperatureVariation);
     btn_temperaturevtf.addEventListener("click", tftemperatureVariation);
 }
+// Eventos conversion de volumen
+// Comparar el nombre para ejecutarse
 if(file_name == "volumeconversor.html"){
     btn_conversionVolume.addEventListener("click", convertVolume);
 }
+// Eventos teorema de pitagoras
+// Comparar el nombre para ejecutarse
 if(file_name == "pythagorastheorem.html"){
     btn_hypothenusePT.addEventListener("click", hypothenusePT);
     btn_rednackaPT.addEventListener("click", rednackaPT);

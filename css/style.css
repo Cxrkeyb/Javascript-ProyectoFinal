@@ -405,14 +405,14 @@ footer a {
   line-height: 0.5; }
 
 .imageTheory {
-  height: 30vh;
+  width: 22vw;
   border: 1px solid black; }
 
 .themeTheory {
   display: flex;
   align-items: center;
-  width: 80vw;
-  justify-content: center;
+  width: 35vw;
+  height: 32vw;
   flex-direction: column;
   border-radius: 1vw;
   padding: 2vw; }
@@ -421,6 +421,6 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 2vw;
-  padding: 2vw; }
+  padding: 2vw;
+  flex-wrap: wrap; }
