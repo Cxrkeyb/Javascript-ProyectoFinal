@@ -40,62 +40,66 @@
     <div class="sectionGeneral">
         <div class="geometricSections">
             <div class="geometricExplain">
-                <h2>Interest</h2>
-                <p>Simple interest is interest, which is charged at the end of a one-year period and is expressed as X%
-                    per year. In addition, simple interest is always calculated on the original principal amount, i.e.,
-                    if the debtor is late in paying interest, the principal is not increased by the unpaid interest.
+                <h2>Pythagoras theorem</h2>
+                <p>The Pythagorean theorem states that in every right triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the respective lengths of the legs.
                 </p>
                 <div class="calculateContainer">
                     <div class="calculateFormulaTxT">
-                        <h3 class="titleExplain">Simple Interest</h3>
-                            <div class="formulaContainer">
-                                <span class="txtExplain">Cf =</span> C<span class="txtExplain">(</span>1 <span
-                                class="txtExplain">+</span>
-                                <div class="formulaDominator">
-                                    <div class="textUp">r</div>
-                                    <div><span>100</span></div>
-                                </div>
-                                t
-                                <span class="txtExplain">)</span>
-                            </div>
+                        <h3 class="titleExplain"> Hypotenuse formula</h3>
+                        <div class="formulaContainer">
+                            <span class="txtExplain">C = </span>√(a<sup>2</sup><span class="txtExplain">+</span>b<sup>2)</sup>
+                        </div>
                         <div class="calculateFormula" id="rectangleCardA">
-                            <h3 class="functionFigure">Calculate Simple Interest</h3>
-                            <div><input type="number" id="initialCapitalSI" placeholder="Ci" class="inputGeometric">
-                                <input type="number" id="interestrateSI" placeholder="r" class="inputGeometric">
-                                <input type="number" id="periodSI" placeholder="t" class="inputGeometric"></div>
-                            <button type="button" id="calculateSI" class="calculateBtn"><i
+                            <h3 class="functionFigure">Calculate Hypotenuse</h3>
+                            <div>
+                                <input type="number" id="redneckaH" placeholder="a" class="inputGeometric">
+                                <input type="number" id="redneckbH" placeholder="b" class="inputGeometric">
+                            </div>
+                            <button type="button" id="calculatehypotenuseH" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="calculatedSI"></div>
+                            <div id="calculatedhypotenuseH"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaTxT">
-                        <h3 class="titleExplain">Composed Interes</h3>
+                        <h3 class="titleExplain"> Rednack A formula</h3>
                         <div class="formulaContainer">
-                            <span class="txtExplain">Cf =</span> C<span class="txtExplain">(</span>1 <span
-                            class="txtExplain">+</span>
-                            <div>
-                                <div class="textUp">r</div>
-                                <div><span>100</span></div>
-                            </div>
-                            <span class="txtExplain">)</span>
-                            <sup class="supNumber">t</sup>
+                            <span class="txtExplain">a = </span>√(c<sup>2</sup><span class="txtExplain">-</span>b<sup>2)</sup>
                         </div>
                         <div class="calculateFormula" id="rectangleCardA">
-                            <h3 class="functionFigure">Calculate composed interest</h3>
-                            <div><input type="number" id="initialCapitalCI" placeholder="Ci" class="inputGeometric">
-                                <input type="number" id="interestrateCI" placeholder="r" class="inputGeometric">
-                                <input type="number" id="periodCI" placeholder="t" class="inputGeometric"></div>
-                            <button type="button" id="calculateCI" class="calculateBtn"><i
+                            <h3 class="functionFigure">Calculate Rednack A</h3>
+                            <div>
+                                <input type="number" id="hypotenusecRA" placeholder="c" class="inputGeometric">
+                                <input type="number" id="redneckbRA" placeholder="b" class="inputGeometric">
+                            </div>
+                            <button type="button" id="calculateredneckA" class="calculateBtn"><i
                                     class="fas fa-play"></i>
                             </button>
-                            <div id="calculatedCI"></div>
+                            <div id="calculatedredneckA"></div>
+                        </div>
+                    </div>
+                    <div class="calculateFormulaTxT">
+                        <h3 class="titleExplain"> Rednack B formula</h3>
+                        <div class="formulaContainer">
+                            <span class="txtExplain">b = </span>√(c<sup>2</sup><span class="txtExplain">-</span>a<sup>2)</sup>
+                        </div>
+                        <div class="calculateFormula" id="rectangleCardA">
+                            <h3 class="functionFigure">Calculate Rednack B</h3>
+                            <div>
+                                <input type="number" id="hypotenusecRB" placeholder="c" class="inputGeometric">
+                                <input type="number" id="redneckaRB" placeholder="a" class="inputGeometric">
+                            </div>
+                            <button type="button" id="calculateredneckB" class="calculateBtn"><i
+                                    class="fas fa-play"></i>
+                            </button>
+                            <div id="calculatedredneckB"></div>
                         </div>
                     </div>
                     <div class="calculateFormulaData">
-                            <h2>Data</h2>
-                            <p><span class="txtExplain">Cf =</span> Final Capital <span class="txtExplain">Ci =</span> Initial Capital</p>
-                            <p><span class="txtExplain">r =</span>  interest rate <span class="txtExplain">t =</span> savings period in years</p>
+                        <h2>Data</h2>
+                        <p><span class="txtExplain">a =</span> Rednack A <span class="txtExplain">b =</span>
+                            Recknack B</p>
+                        <p><span class="txtExplain">c =</span> Hypotenuse</p>
                     </div>
                 </div>
             </div>
@@ -114,4 +118,5 @@
     <script src="../js/comparefile.js"></script>
     <script src="../js/nav.js"></script>
 </body>
+
 </html>

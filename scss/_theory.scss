@@ -1,0 +1,21 @@
+.imageTheory{
+    height: 30vh;
+    border: 1px solid black;
+}
+.themeTheory{
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1vw;
+    padding: 2vw;
+}
+.sectionTheory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 2vw;
+    padding: 2vw;
+}

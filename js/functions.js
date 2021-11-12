@@ -66,9 +66,9 @@ function divide(a,b){
 function getStorageC(a){
     operation = sessionStorage.getItem('OCalculated');
     if(!operation){
-        operation = []
+        operation = [];
     }else{
-    operation = JSON.parse(operation)
+    operation = JSON.parse(operation);
     }
     calculated = {
         number: number1,

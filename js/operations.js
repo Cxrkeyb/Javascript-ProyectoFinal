@@ -369,3 +369,29 @@ function tftemperatureVariation(){
     total = value1 - valueSelectorTo;
     totalDom("#calculatedtemperatureV", "Δt", "°C");
 }
+function rednackaPT(){
+    get2ID("hypotenusecRA", "redneckbRA");
+    if(value1 > valueSelectorTo){
+        total = Math.sqrt((Math.pow(value1, 2)) - (Math.pow(valueSelectorTo, 2)));
+        totalDom("#calculatedredneckA", "Rednack A", "(measure)");
+    }else{
+       $("#calculatedredneckA").empty();
+       $("#calculatedredneckA").append(`<p class="totalTxt">This is not possible, the hypotenuse must be greater than the typed rednack.</p>`)
+    }
+    
+}
+function rednackbPT(){
+    get2ID("hypotenusecRB", "redneckaRB");
+    if(value1 > valueSelectorTo){
+        total = Math.sqrt((Math.pow(value1, 2)) - (Math.pow(valueSelectorTo, 2)));
+        totalDom("#calculatedredneckB", "Rednack B", "(measure)");
+    }else{
+    $("#calculatedredneckB").empty();
+    $("#calculatedredneckB").append(`<p class="totalTxt">This is not possible, the hypotenuse must be greater than the typed rednack.</p>`)
+    }
+}
+function hypothenusePT(){
+    get2ID("redneckaH", "redneckbH");
+    total = Math.sqrt((Math.pow(value1, 2)) + (Math.pow(valueSelectorTo, 2)));
+    totalDom("#calculatedhypotenuseH", "Hypothenuse", "(measure)");
+}
