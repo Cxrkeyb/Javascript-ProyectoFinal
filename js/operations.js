@@ -17,7 +17,7 @@ function substractionC(){
 // Multiplicación de dos valores  
 function multiplyC(){
     getValues();
-    multiply(number1,number2);
+    multiplication(number1,number2);
     paragraph.innerHTML = `<p> The result of the operation is  ${total}<p>`
     calculator.appendChild(paragraph);
     getStorageC("*");
@@ -33,7 +33,26 @@ function divideC(){
 function valueBefore(){
     $('#tableBeforeValues').prepend(`<div class="tableGeneral"><div class="tableInside">${(operation[index]).operator}</div><div class="tableInside">${(operation[index]).number}</div><div class="tableInside">${(operation[index]).number2}</div><div class="tableInside">${(operation[index]).total}</div></div>`)
 }
-
+// Funcion de switch para cambio de medidas
+function selectorDetect(){
+    switch(Math.sign(total)){
+        case 1:
+            distance = PadRight(1, total+1);
+            result = number1 * distance;
+            paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
+            convertions.appendChild(paragraph);
+            break;
+        case -1:
+            distance = PadRight(1, (total*-1)+1);
+            result = number1 / distance;
+            paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
+            convertions.appendChild(paragraph);
+            break;
+        default:
+            paragraph.innerHTML = `<p>There isn't a convertion ${number1} ${select1}<p>`
+            convertions.appendChild(paragraph);
+    }
+}
 // Funciones de cambios de medidas
 function measureMeters(){
     metering = ["mm", "cm", "dm", "m", "Dm", "Hm", "Km"];
@@ -41,22 +60,7 @@ function measureMeters(){
     select1 = document.getElementById('measure').value;
     select2 = document.getElementById('toMeasure').value;
     substraction(metering.indexOf(select1), metering.indexOf(select2))
-    if (Math.sign(total) == 1){
-        distance = PadRight(1, total+1);
-        result = number1 * distance;
-        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
-        convertions.appendChild(paragraph);
-    }
-    else if (Math.sign(total) == -1){
-        distance = PadRight(1, (total*-1)+1);
-        result = number1 / distance;
-        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
-        convertions.appendChild(paragraph);
-    }
-    else{
-        paragraph.innerHTML = `<p>There isn't a convertion ${number1} ${select1}<p>`
-        convertions.appendChild(paragraph);
-    }
+    selectorDetect();
 }
 // Funciones de cambios de medidas
 function measureGrams(){
@@ -65,22 +69,7 @@ function measureGrams(){
     select1 = document.getElementById('measure').value;
     select2 = document.getElementById('toMeasure').value;
     substraction(metering.indexOf(select1), metering.indexOf(select2))
-    if (Math.sign(total) == 1){
-        distance = PadRight(1, total+1);
-        result = number1 * distance;
-        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
-        convertions.appendChild(paragraph);
-    }
-    else if (Math.sign(total) == -1){
-        distance = PadRight(1, (total*-1)+1);
-        result = number1 / distance;
-        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
-        convertions.appendChild(paragraph);
-    }
-    else{
-        paragraph.innerHTML = `<p>There isn't a convertion ${number1} ${select1}<p>`
-        convertions.appendChild(paragraph);
-    }
+    selectorDetect();
 }
 function convertVolume(){
     metering = ["ml", "cl", "dl", "L"];
@@ -88,37 +77,21 @@ function convertVolume(){
     select1 = document.getElementById('measure').value;
     select2 = document.getElementById('toMeasure').value;
     substraction(metering.indexOf(select1), metering.indexOf(select2))
-    if (Math.sign(total) == 1){
-        distance = PadRight(1, total+1);
-        result = number1 * distance;
-        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
-        convertions.appendChild(paragraph);
-    }
-    else if (Math.sign(total) == -1){
-        distance = PadRight(1, (total*-1)+1);
-        result = number1 / distance;
-        paragraph.innerHTML = `<p>The convertion of ${number1} ${select1} to ${select2} is ${result}${select2} <p>`
-        convertions.appendChild(paragraph);
-    }
-    else{
-        paragraph.innerHTML = `<p>There isn't a convertion ${number1} ${select1}<p>`
-        convertions.appendChild(paragraph);
-    }
+    selectorDetect();
 }
 // Añade ceros a la parte derecha para las conversiones
 function PadRight(value, length) {
-    return (value.toString().length < length) ? PadRight(value + "0", length) : 
-    value;
+    return (value.toString().length < length) ? PadRight(value + "0", length) : value;
 }
 // Funciones de área
 function squareA(){
     get2ID("areaSquare", "measureAS");
-    total = value1 * value1;
+    multiplication(value1,value1)
     totalDom("#totalAreaS", "Area", valueSelectorTo);
 }
 function rectangleA(){
     get3ID("areaRectangleB", "areaRectangleH", "measureAR");
-    total = value1 * value2;
+    multiplication(value1,value2)
     totalDom("#totalAreaR", "Area", valueSelectorTo);
 }
 function triangleA(){
@@ -128,128 +101,138 @@ function triangleA(){
 }
 function circleA(){
     get2ID("areaCircleR","measureAC");
-
     total = Math.PI * Math.pow(value1, 2);
     totalDom("#totalAreaC", "Area", valueSelectorTo);
 }
 // Funciones de perimetro
 function squareP(){
     get2ID("perimeterSquare", "measurePS")
-    total = value1 * 4;
-
+    multiplication(value1,4)
     totalDom("#totalPerimeterS", "Perimeter", valueSelectorTo);
 }
 function rectangleP(){
     get3ID("perimeterRectangleB", "perimeterRectangleH","measurePR");
     total = (2*value1)+(2*value2);
-
     totalDom("#totalPerimeterR", "Perimeter", valueSelectorTo);
 }
 function triangleP(){
     get4ID("perimeterTriangleA", "perimeterTriangleB", "perimeterTriangleC", "measurePT")
     total = value1 + value2 + value3;
-
     totalDom("#totalPerimeterT", "Perimeter", valueSelectorTo);
 }
 function circleP(){
     get2ID("perimeterCircleR", "measurePC");
     total = (2 * Math.PI * value1);
-
     totalDom("#totalPerimeterC", "Perimeter", valueSelectorTo);
 }
 // Funciones de radio, diametro y circunfenrencia (Circulo)
 function circleR(){
     get2ID("radiusCircle","measureRC");
     total = (value1 / ( 2 * Math.PI))
-
     totalDom("#totalRadiusC", "Radius", valueSelectorTo)
 }
 function circleD(){
     get2ID("diameterCircle","measureDC");
-    total = 2 * value1;
-
+    multiplication(2,value1)
     totalDom("#totalDiameterC", "Diameter", valueSelectorTo)
 }
 function circleC(){
     get2ID("circumferenceCircle","measureCC");
-    total = value1 * Math.PI;
-
+    multiplication(value1,Math.PI)
     totalDom("#totalCircumferenceC", "Circumference", valueSelectorTo)
 }
 // Conversor de Temperaturas
 function temperatureConversor(){
     get3ID("temperatureValue", "temperatureInitial", "temperatureFinal");
-    if(valueSelectorTo === "Farenheit"){
-        if (value2 === "Kelvin"){
-            total = ((9*(value1 - 273.15))/5)+32;
-        }
-        else if (value2 === "Celcius"){
-            total = ((9*value1)/5)+32;
-        }
-        totalDom("#finalTemperature", "Farenheit")
-    }
-    else if(valueSelectorTo === "Celcius"){
-        if (value2 === "Kelvin"){
-            total = ((9*(value1 - 273.15))/5)+32;
-        }
-        else if (value2 === "Farenheit"){
-            total = (5*(value1 - 32))/9;
-        }
-        totalDom("#finalTemperature", "Celcius")
-    }
-    else if(valueSelectorTo === "Kelvin"){
-        if (value2 === "Celcius"){
-            value1 = Number(value1);
-            total = value1 + 273.15;
-        }
-        else if (value2 === "Farenheit"){
-            total = ((5*(value1 - 32))/9)+273.15;
-        }
-        totalDom("#finalTemperature", "Kelvin")
+    switch(valueSelectorTo){
+        case "Farenheit":
+            switch(value2){
+                case "Kelvin":
+                    total = ((9*(value1 - 273.15))/5)+32;
+                    break;
+                case "Celcius":
+                    total = ((9*value1)/5)+32;
+                    break;
+                default:
+                    total = value1;
+                    break;
+            }
+            totalDom("#finalTemperature", "Farenheit", "°F") 
+            break;
+        case "Kelvin":
+            switch(value2){
+                case "Celcius":
+                    value1 = Number(value1);
+                    total = value1 + 273.15;
+                    break;
+                case "Farenheit":
+                    total = ((5*(value1 - 32))/9)+273.15;
+                    break;
+                default:
+                    total = value1;
+                    break;
+            }
+            totalDom("#finalTemperature", "Kelvin", "°K")
+            break;
+        case "Celcius":
+            switch(value2){
+                case "Kelvin":
+                    total = ((9*(value1 - 273.15))/5)+32;
+                    break;
+                case "Farenheit":
+                    total = (5*(value1 - 32))/9;
+                    break;
+                default:
+                    total = value1;
+                    break;
+            }
+            totalDom("#finalTemperature", "Celcius", "°C")
+            break;
     }
 }
 // Calcular IMC de la persona
 function IMCCalculator(){
     get2ID("weightValue", "heightValue");
     total = (value1 / (Math.pow(valueSelectorTo, 2))).toFixed(2);
-    if(total < 18.5){
-        totalDom("#calculatedBMI", "Underweight", "BMI")
-    }else{
-        if(total >= 18.5 && 24.9 <= total){
+    switch(true){
+        case (total < 18.5):
+            totalDom("#calculatedBMI", "Underweight", "BMI")
+            break;
+        case (total >= 18.5 && total <= 24.9):
             totalDom("#calculatedBMI", "Normal", "BMI")
-        }
-        if(total >= 25 && 29.9 <= total){
+            break;
+        case (total >= 25 && total <= 29.9):
             totalDom("#calculatedBMI", "Overweight", "BMI")
-        }
-        if(total >= 30.0 ){
+            break;
+        case (total >= 30.0 ):
             totalDom("#calculatedBMI", "Obesity", "BMI")
-        }
+            break;
     }
 }
 // MRU Operaciones
 function mruDisplacement(){
     get2ID("mrudisfinalD", "mrudisinitialD");
-    total = valueSelectorTo - value1;
+    substraction(value1, valueSelectorTo);
     totalDom("#dispCalculatedMru", "Displacement", "m")
 }
 function mruDistance(){
     get2ID("mruspeedD", "mrutimeD");
-    total = value1 * valueSelectorTo;
+    multiplication(value1, valueSelectorTo);
     totalDom("#distCalculatedMru", "Distance", "m");
 }
 function mruTime(){
     get2ID("mrudistanceT", "mruspeedT");
-    total = value1 / valueSelectorTo;
+    divide(value1, valueSelectorTo);
     totalDom("#timeCalculatedMru", "Time", "s");
 }
 function mruSpeed(){
     get2ID("mrudistanceS", "mrutimeS");
-    total = value1 / valueSelectorTo;
+    divide(value1, valueSelectorTo);
     totalDom("#speedCalculatedMru", "Speed", "m/s")
 }
 function mruAverageS(){
     get2ID("mrudispAS", "mrutimeAS");
-    total = value1 / valueSelectorTo;
+    divide(value1, valueSelectorTo);
     totalDom("#averagespeedCalculatedMru", "Average speed", "m/s")
 }
 // Calculate Interest
@@ -260,18 +243,21 @@ function simpleInterest(){
 }
 function composedInterest(){
     get3ID("initialCapitalCI", "interestrateCI", "periodCI");
-    total = (value1 * Math.pow((1 + (value2/100), valueSelectorTo))).toFixed(2);
+    total = Math.pow((1 + (value2/100)), valueSelectorTo)
+    total = (value1 * total).toFixed(2);
     totalDom("#calculatedCI", "Composed Interest", "$")
 }
 // Calculate Equation Second Grade
 function eqscndgrade(){
     get3ID("aEqScndGrade", "bEqScndGrade", "cEqScndGrade");
     pow = (Math.pow(value2, 2) - (4 * value1 * valueSelectorTo));
-    if (Math.sign(pow) == 1){
-        total = ((value2 * -1) + Math.sqrt(pow))/(2*value1);
-    }
-    else if (Math.sign(pow) == -1){
-        total = ((value2 * -1) + Math.sqrt(pow*-1))/(2*value1);
+    switch(Math.sign(pow)){
+        case 1:
+            total = ((value2 * -1) + Math.sqrt(pow))/(2*value1);
+            break;
+        case -1:
+            total = ((value2 * -1) + Math.sqrt(pow*-1))/(2*value1);
+            break;
     }
     totalDom("#calculatedEqScndGrade", "x", "");
 }
@@ -283,7 +269,7 @@ function propagationsWave(){
 }
 function lineardWave(){
     get2ID("kglineardW", "mlineardW");
-    total = (value1 / valueSelectorTo);
+    divide(value1, valueSelectorTo);
     totalDom("#calculatedlineardW", "Propagation speed", "m/s");
 }
 function keystrokepWave(){
@@ -308,23 +294,23 @@ function frequencyWave(){
 }
 function wavelengthWave(){
     get2ID("speedpwlW","periodwlW");
-    total = value1 * valueSelectorTo;
+    multiplication(value1, valueSelectorTo);
     totalDom("#calculatedwavelenghtWave", "Wavelenght", "m");
 }
 // Contact Force
 function resultingforcemaCF(){
     get2ID("massRS", "acelerationRS");
-    total = value1 * valueSelectorTo;
+    multiplication(value1,valueSelectorTo);
     totalDom("#calculatedRS", "Resulting Force", "N");
 }
 function resultingforcefrCF(){
     get2ID("froneRS", "frtwoRS");
-    total = value1 - valueSelectorTo;
+    substraction(value1,valueSelectorTo);
     totalDom("#calculatedRS", "Resulting Force", "N");
 }
 function resultingforceaCF(){
     get2ID("resultingforceacelaration", "massaceleration");
-    total = value1 / valueSelectorTo;
+    divide(value1, valueSelectorTo);
     totalDom("#calculatedAcelerationCF", "Aceleration", "m/s<sup>2</sup>");
 }
 // Energies
@@ -366,7 +352,7 @@ function hmstemperatureVariation(){
 }
 function tftemperatureVariation(){
     get2ID("tFinalTV", "tInitialTV");
-    total = value1 - valueSelectorTo;
+    substraction(value1, valueSelectorTo)
     totalDom("#calculatedtemperatureV", "Δt", "°C");
 }
 function rednackaPT(){
@@ -394,4 +380,21 @@ function hypothenusePT(){
     get2ID("redneckaH", "redneckbH");
     total = Math.sqrt((Math.pow(value1, 2)) + (Math.pow(valueSelectorTo, 2)));
     totalDom("#calculatedhypotenuseH", "Hypothenuse", "(measure)");
+}
+function translatedDom(ubication, find){
+    $(ubication).empty();
+    $(ubication).append(`<p class="totalTxt">${find} = ${binariesTranslated}</p>`)
+}
+// Texto a binario
+function textToBinaries(){
+    normalText = document.getElementById("textnormalValue").value;
+    for (let letters of normalText) {
+        binariesData.filter(function(element){
+            if(element.normalValue === letters){
+                binariesTranslated = `${binariesTranslated} ${element.binaryCode}`;
+            }
+          })
+    }
+    translatedDom("#translatedBinaries", "Translated");
+    binariesTranslated = "";
 }

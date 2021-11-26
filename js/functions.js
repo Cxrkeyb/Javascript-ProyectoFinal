@@ -1,5 +1,4 @@
 // FUNCTIONS
-
 // Añadir al texto dom el resultado
 function totalDom(ubication, find, measure){
     $(ubication).empty();
@@ -22,45 +21,27 @@ function get4ID(firstElementId,secondElementId,thirdElementId,fourthElementId){
     value3 = Number(document.getElementById(thirdElementId).value);
     valueSelectorTo = document.getElementById(fourthElementId).value;
 }
-
 //Funciones calcular
 function getValues(){
     number1 = parseFloat(document.getElementById('valor1').value)
     number2 = parseFloat(document.getElementById('valor2').value)
 }
-function addition(a,b){
-    if(a - Math.floor(a) == 0){
-        total = (a+b);
-    }
-    else{
-        total = (a+b).toFixed(2);
-    }
+// Suma
+const addition = (a,b) => {
+    total = a + b
 }
-function substraction(a,b){
-    if(a - Math.floor(a) == 0){
-        total = (a-b);
-    }
-    else{
-        total = (a-b).toFixed(2);
-    }
+// Resta
+const substraction = (a,b) => {
+    total = a - b
 }
-function multiply(a,b){
-    if(a - Math.floor(a) == 0){
-        total = (a*b);
-    }
-    else{
-        total = (a*b).toFixed(2);
-    }
+// Multiplication
+const multiplication = (a,b) => {
+    total = a * b
 }
-function divide(a,b){
-    if(a - Math.floor(a) == 0){
-        total = (a/b).toFixed(2);
-    }
-    else{
-        total = (a/b).toFixed(5);
-    }
+// Divide
+const divide = (a,b) => {
+    total = a / b
 }
-
 // Funciones de la calculadora
 // Almacenar valores y mostrarlos en pantalla
 function getStorageC(a){

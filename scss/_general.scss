@@ -95,6 +95,20 @@ h1,h2,h3,h4,h5,h6{
     background-color: lavender;
     border-radius: 20px;
 }
+.translateInput{
+    width: 400px;
+    height: 60px;
+    color: black; 
+}
+.translatedBinariesContainer{
+    background-color: #ebedee;
+    width: 50vw;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+}
 // font-family: 'Balsamiq Sans', cursive;
 // font-family: 'Catamaran', sans-serif;
 // font-family: 'Josefin Sans', sans-serif;

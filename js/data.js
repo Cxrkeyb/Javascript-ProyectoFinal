@@ -120,3 +120,405 @@ const theoryData = [
         img: "../assets/theory/wavemotionTheory.png"
     }
 ]
+const binariesData = [
+    {
+        id: 1,
+        normalValue: "a",
+        binaryCode: "01100001"
+    },
+    {
+        id: 2,
+        normalValue: "b",
+        binaryCode: "01100010"
+    },
+    {
+        id: 3,
+        normalValue: "c",
+        binaryCode: "01100011"
+    },
+    {
+        id: 4,
+        normalValue: "d",
+        binaryCode: "01100100"
+    },
+    {
+        id: 5,
+        normalValue: "e",
+        binaryCode: "01100101"
+    },
+    {
+        id: 6,
+        normalValue: "f",
+        binaryCode: "01100110"
+    },
+    {
+        id: 7,
+        normalValue: "g",
+        binaryCode: "01100111"
+    },
+    {
+        id: 8,
+        normalValue: "h",
+        binaryCode: "01101000"
+    },
+    {
+        id: 9,
+        normalValue: "i",
+        binaryCode: "01101001"
+    },
+    {
+        id: 10,
+        normalValue: "j",
+        binaryCode: "01101010"
+    },
+    {
+        id: 11,
+        normalValue: "k",
+        binaryCode: "01101011"
+    },
+    {
+        id: 12,
+        normalValue: "l",
+        binaryCode: "01101100"
+    },
+    {
+        id: 13,
+        normalValue: "m",
+        binaryCode: "01101101"
+    },
+    {
+        id: 14,
+        normalValue: "n",
+        binaryCode: "01101110"
+    },
+    {
+        id: 15,
+        normalValue: "o",
+        binaryCode: "01101111"
+    },
+    {
+        id: 16,
+        normalValue: "p",
+        binaryCode: "01110000"
+    },
+    {
+        id: 17,
+        normalValue: "q",
+        binaryCode: "01110001"
+    },
+    {
+        id: 18,
+        normalValue: "r",
+        binaryCode: "01110010"
+    },
+    {
+        id: 19,
+        normalValue: "s",
+        binaryCode: "01110011"
+    },
+    {
+        id: 20,
+        normalValue: "t",
+        binaryCode: "01110100"
+    },
+    {
+        id: 21,
+        normalValue: "u",
+        binaryCode: "01110101"
+    },
+    {
+        id: 22,
+        normalValue: "v",
+        binaryCode: "01110110"
+    },
+    {
+        id: 23,
+        normalValue: "w",
+        binaryCode: "01110111"
+    },
+    {
+        id: 24,
+        normalValue: "x",
+        binaryCode: "01111000"
+    },
+    {
+        id: 25,
+        normalValue: "y",
+        binaryCode: "01111001"
+    },
+    {
+        id: 26,
+        normalValue: "z",
+        binaryCode: "01111010"
+    },
+    {
+        id: 27,
+        normalValue: "A",
+        binaryCode: "01000001"
+    },
+    {
+        id: 28,
+        normalValue: "B",
+        binaryCode: "01000010"
+    },
+    {
+        id: 29,
+        normalValue: "C",
+        binaryCode: "01000011"
+    },
+    {
+        id: 30,
+        normalValue: "D",
+        binaryCode: "01000100"
+    },
+    {
+        id: 31,
+        normalValue: "E",
+        binaryCode: "01000101"
+    },
+    {
+        id: 32,
+        normalValue: "F",
+        binaryCode: "01000110"
+    },
+    {
+        id: 33,
+        normalValue: "G",
+        binaryCode: "01000111"
+    },
+    {
+        id: 34,
+        normalValue: "H",
+        binaryCode: "01001000"
+    },
+    {
+        id: 35,
+        normalValue: "I",
+        binaryCode: "01001001"
+    },
+    {
+        id: 36,
+        normalValue: "J",
+        binaryCode: "01001010"
+    },
+    {
+        id: 37,
+        normalValue: "K",
+        binaryCode: "01001011"
+    },
+    {
+        id: 38,
+        normalValue: "L",
+        binaryCode: "01001100"
+    },
+    {
+        id: 39,
+        normalValue: "M",
+        binaryCode: "01001101"
+    },
+    {
+        id: 40,
+        normalValue: "N",
+        binaryCode: "01001110"
+    },
+    {
+        id: 41,
+        normalValue: "O",
+        binaryCode: "01001111"
+    },
+    {
+        id: 42,
+        normalValue: "P",
+        binaryCode: "01010000"
+    },
+    {
+        id: 43,
+        normalValue: "Q",
+        binaryCode: "01010001"
+    },
+    {
+        id: 44,
+        normalValue: "R",
+        binaryCode: "01010010"
+    },
+    {
+        id: 45,
+        normalValue: "S",
+        binaryCode: "01010011"
+    },
+    {
+        id: 46,
+        normalValue: "T",
+        binaryCode: "01010100"
+    },
+    {
+        id: 47,
+        normalValue: "U",
+        binaryCode: "01010101"
+    },
+    {
+        id: 48,
+        normalValue: "V",
+        binaryCode: "01010110"
+    },
+    {
+        id: 49,
+        normalValue: "W",
+        binaryCode: "01010111"
+    },
+    {
+        id: 50,
+        normalValue: "X",
+        binaryCode: "01011000"
+    },
+    {
+        id: 51,
+        normalValue: "Y",
+        binaryCode: "01011001"
+    },
+    {
+        id: 52,
+        normalValue: "Z",
+        binaryCode: "01011010"
+    },
+    {
+        id: 53,
+        normalValue: "!",
+        binaryCode: "00100001"
+    },
+    {
+        id: 54,
+        normalValue: "#",
+        binaryCode: "00100011"
+    },
+    {
+        id: 55,
+        normalValue: "$",
+        binaryCode: "00100100"
+    },
+    {
+        id: 56,
+        normalValue: "%",
+        binaryCode: "00100101"
+    },
+    {
+        id: 57,
+        normalValue: "&",
+        binaryCode: "00100110"
+    },
+    {
+        id: 58,
+        normalValue: "'",
+        binaryCode: "00100111"
+    },
+    {
+        id: 59,
+        normalValue: "(",
+        binaryCode: "00101000"
+    },
+    {
+        id: 60,
+        normalValue: ")",
+        binaryCode: "00101001"
+    },
+    {
+        id: 61,
+        normalValue: "*",
+        binaryCode: "00101010"
+    },
+    {
+        id: 62,
+        normalValue: "+",
+        binaryCode: "00101011"
+    },
+    {
+        id: 63,
+        normalValue: ",",
+        binaryCode: "00101100"
+    },
+    {
+        id: 64,
+        normalValue: "-",
+        binaryCode: "00101101"
+    },
+    {
+        id: 65,
+        normalValue: ".",
+        binaryCode: "00101110"
+    },
+    {
+        id: 66,
+        normalValue: "/",
+        binaryCode: "00101111"
+    },
+    {
+        id: 65,
+        normalValue: "0",
+        binaryCode: "00110000"
+    },
+    {
+        id: 67,
+        normalValue: "1",
+        binaryCode: "00110001"
+    },
+    {
+        id: 68,
+        normalValue: "2",
+        binaryCode: "00110010"
+    },
+    {
+        id: 69,
+        normalValue: "3",
+        binaryCode: "00110011"
+    },
+    {
+        id: 70,
+        normalValue: "4",
+        binaryCode: "00110100"
+    },
+    {
+        id: 71,
+        normalValue: "5",
+        binaryCode: "00110101"
+    },
+    {
+        id: 72,
+        normalValue: "6",
+        binaryCode: "00110110"
+    },
+    {
+        id: 73,
+        normalValue: "7",
+        binaryCode: "00110111"
+    },
+    {
+        id: 74,
+        normalValue: "8",
+        binaryCode: "00111000"
+    },
+    {
+        id: 75,
+        normalValue: "9",
+        binaryCode: "00111001"
+    },
+    {
+        id: 76,
+        normalValue: "?",
+        binaryCode: "00111111"
+    },
+    {
+        id: 77,
+        normalValue: "@",
+        binaryCode: "01000000"
+    },
+    {
+        id: 78,
+        normalValue: "_",
+        binaryCode: "01011111"
+    },
+    {
+        id: 79,
+        normalValue: " ",
+        binaryCode: "00100000"
+    }
+]

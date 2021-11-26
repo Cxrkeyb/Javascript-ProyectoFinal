@@ -8,6 +8,7 @@ let select1;
 let select2;
 let distance;
 let index = 0;
+let binariesTranslated = "";
 let operation = [];
 let calculated = {};
 let calculation;
@@ -95,6 +96,9 @@ let btn_temperaturevtf = document.getElementById("calculatetftiTV");
 let btn_hypothenusePT = document.getElementById("calculatehypotenuseH");
 let btn_rednackaPT = document.getElementById("calculateredneckA");
 let btn_rednackbPT = document.getElementById("calculateredneckB");
+
+// Variables of Binaries numbers
+let btn_textToBinaries = document.getElementById("translateToBinaries")
 
 // Creando variables de texto
 let paragraph = document.createElement("p");
