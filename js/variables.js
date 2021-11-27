@@ -82,9 +82,11 @@ let btn_hypothenusePT = document.getElementById("calculatehypotenuseH");
 let btn_rednackaPT = document.getElementById("calculateredneckA");
 let btn_rednackbPT = document.getElementById("calculateredneckB");
 // Variables of Binaries numbers
-let btn_textToBinaries = document.getElementById("translateToBinaries")
+let btn_textToBinaries = document.getElementById("translateToBinaries");
 // Variables of Ascii code
-let btn_textToAscii = document.getElementById("translateToAscii")
+let btn_textToAscii = document.getElementById("translateToAscii");
+// Variables of time duration
+let btn_calculateKDR = document.getElementById("calculateKDR");
 // Creando variables de texto
 let paragraph = document.createElement("p");
 

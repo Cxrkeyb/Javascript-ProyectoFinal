@@ -548,7 +548,7 @@ const indexData = [
         html: "./pages/temperatureConversion.html"
     },
     {
-        id: "h1",
+        id: "d1",
         section: "BMI Calculator",
         img: "assets/img/imc.png",
         html: "./pages/imccalculator.html"
@@ -630,5 +630,11 @@ const indexData = [
         section: "Text to Ascii code",
         img: "assets/img/ascii.png",
         html: "./pages/asciinumbers.html"
+    },
+    {
+        id: "m4",
+        section: "KDR",
+        img: "assets/img/KDR.png",
+        html: "./pages/kdr.html"
     }
 ]

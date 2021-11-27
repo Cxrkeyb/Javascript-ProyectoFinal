@@ -410,5 +410,27 @@ function textToAscii(){
     asciiCodeString = asciicode.toString();
     const asciiCodeStringSpace = asciiCodeString.replace(/,/g,' ');
     translatedDom("#translatedAscii", "Translated", asciiCodeStringSpace);
-    binariesTranslated = "";
+    asciiCodeStringSpace = "";
+}
+function calculateKdr(){
+    get3ID("nicknameKdr","killsKdr","deathsKdr");
+    class KDR {
+        constructor(user, kills, deaths) {
+            this.user = user;
+            this.kills = Number(kills);
+            this.deaths = Number(deaths);
+        }
+        get product() {
+            return this.user;
+        }
+        get KD() {
+            return (this.kills / this.deaths);
+        }
+        userInfo() {
+            return `The KD of ${this.user} is ${this.KD}`;
+        }
+    }
+    const user = new KDR(value1, value2, valueSelectorTo);
+    total = user.userInfo();
+    totalDom("#calculatedKDR", "KDR", "");
 }

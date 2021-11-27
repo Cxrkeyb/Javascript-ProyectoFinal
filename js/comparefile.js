@@ -93,4 +93,7 @@ switch(file_name){
     case "asciinumbers.html":
         btn_textToAscii.addEventListener("click", textToAscii);
         break;
+    case "kdr.html":
+        btn_calculateKDR.addEventListener("click", calculateKdr);
+        break;
 }
