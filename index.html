@@ -37,109 +37,17 @@
             <h2>Untangled</h2>
             <p>Welcome to our website below you will see all the functionalities that we have to help you solve
                 different types of exercises.</p>
+            <select onchange="filterSections(this)">
+                <option value="General">Category</option>
+                <option value="Math">Math</option>
+                <option value="Physic">Physic</option>
+                <option value="Health">Health</option>
+                <option value="Economy">Economy</option>
+                <option value="Conversion">Conversion</option>
+            </select>
         </div>
-        <div class="cardGeneral">
-            <div class="cardFlex">
-                <a href="pages/calculator.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/svg/calculator.svg" class="cardSvgSize"><span
-                            class="cardTextSize">Calculator</span>
-                    </div>
-                </a>
-                <a href="pages/measures.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/svg/measures.svg" class="cardSvgSize"><span
-                            class="cardTextSize">Measures Conversions</span>
-                    </div>
-                </a>
-                <a href="pages/geometricFigures.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/geometry.png" class="cardSvgSize"><span class="cardTextSize">Geometric
-                            figures</span>
-                    </div>
-                </a>
-                <a href="pages/temperatureConversion.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/temperature.png" class="cardSvgSize"><span class="cardTextSize">Temperatures Conversions</span>
-                    </div>
-                </a>
-            </div>
-            <div class="cardFlex">
-                <a href="pages/imccalculator.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/imc.png" class="cardSvgSize"><span class="cardTextSize">BMI Calculator</span>
-                    </div>
-                </a>
-                <a href="pages/mru.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/MRU.png" class="cardSvgSize"><span class="cardTextSize">MRU</span>
-                    </div>
-                </a>
-                <a href="pages/interest.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/interest.png" class="cardSvgSize"><span class="cardTextSize">Interest</span>
-                    </div>
-                </a>
-                <a href="pages/equationscndgrade.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/equation.png" class="cardSvgSize"><span class="cardTextSize">Equation Second Grade</span>
-                    </div>
-                </a>
-            </div>
-            <div class="cardFlex">
-                <a href="pages/undolatory.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/undulatory.png" class="cardSvgSize"><span class="cardTextSize">Movements Undulatories</span>
-                    </div>
-                </a>
-                <a href="pages/contactforce.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/contact.png" class="cardSvgSize"><span class="cardTextSize">Contact Force
-                        </span>
-                    </div>
-                </a>
-                <a href="pages/conversormass.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/mass.png" class="cardSvgSize"><span class="cardTextSize">Mass Conversions</span>
-                    </div>
-                </a>
-                <a href="pages/energies.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/energy.png" class="cardSvgSize"><span class="cardTextSize">Energies</span>
-                    </div>
-                </a>
-            </div>
-            <div class="cardFlex">
-                <a href="pages/heattransferred.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/heat.png" class="cardSvgSize"><span class="cardTextSize">Specific Heat
-                        </span>
-                    </div>
-                </a>
-                <a href="pages/pythagorastheorem.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/pitagoras.png" class="cardSvgSize"><span class="cardTextSize">Pythagoras theorem</span>
-                    </div>
-                </a>
-                <a href="pages/volumeconversor.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/volume.png" class="cardSvgSize"><span class="cardTextSize">Volume conversions</span>
-                    </div>
-                </a>
-                <a href="pages/theory.html" class="cardLink">
-                    <div class="cardContentFlexMini">
-                        <img src="assets/img/theory.png" class="cardSvgSize"><span class="cardTextSize">Theory</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="cardFlexNoC">
-            <a href="pages/binariesnumbers.html" class="cardLink">
-                <div class="cardContentFlexMini">
-                    <img src="assets/img/binary.png" class="cardSvgSize"><span class="cardTextSize">Conversion to Binaries nums
-                    </span>
-                </div>
-            </a>
+        <div id="cardIndex" class="cardGeneral">
+
         </div>
     </div>
     <footer class="footerFlex">
@@ -148,6 +56,8 @@
         </a>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="js/renderindex.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/nav.js"></script>
 </body>

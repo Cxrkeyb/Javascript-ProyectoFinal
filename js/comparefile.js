@@ -6,7 +6,6 @@ function filename(){
     return relativeRoute;  
 }
 var file_name = filename();
-
 // Comparar el nombre para ejecutarse
 switch(file_name){
     case "calculator.html":
