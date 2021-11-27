@@ -526,103 +526,103 @@ const indexData = [
     {
         id: "m1",
         section: "Calculator",
-        img: "../assets/svg/calculator.svg",
+        img: "assets/svg/calculator.svg",
         html: "./pages/calculator.html"
     },
     {
         id: "c1",
         section: "Measures Conversions",
-        img: "../assets/svg/measures.svg",
+        img: "assets/svg/measures.svg",
         html: "./pages/measures.html"
     },
     {
         id: "g1",
         section: "Geometric figures",
-        img: "../assets/img/geometry.png",
+        img: "assets/img/geometry.png",
         html: "./pages/geometricFigures.html"
     },
     {
         id: "c2",
         section: "Temperatures Conversions",
-        img: "../assets/img/temperature.png",
+        img: "assets/img/temperature.png",
         html: "./pages/temperatureConversion.html"
     },
     {
         id: "h1",
         section: "BMI Calculator",
-        img: "../assets/img/imc.png",
+        img: "assets/img/imc.png",
         html: "./pages/imccalculator.html"
     },
     {
         id: "f1",
         section: "MRU",
-        img: "../assets/img/MRU.png",
+        img: "assets/img/MRU.png",
         html: "./pages/mru.html"
     },
     {
         id: "e1",
         section: "Interest",
-        img: "../assets/img/interest.png",
+        img: "assets/img/interest.png",
         html: "./pages/interest.html"
     },
     {
         id: "m2",
         section: "Equation Second Grade",
-        img: "../assets/img/equation.png",
+        img: "assets/img/equation.png",
         html: "./pages/equationscndgrade.html"
     },
     {
         id: "f2",
         section: "Movements Undolatories",
-        img: "../assets/img/undulatory.png",
+        img: "assets/img/undulatory.png",
         html: "./pages/undolatory.html"
     },
     {
         id: "f3",
         section: "Contact Force",
-        img: "../assets/img/contact.png",
+        img: "assets/img/contact.png",
         html: "./pages/contactforce.html"
     },
     {
         id: "c3",
         section: "Mass Conversions",
-        img: "../assets/img/mass.png",
+        img: "assets/img/mass.png",
         html: "./pages/conversormass.html"
     },
     {
         id: "f4",
         section: "Energies",
-        img: "../assets/img/energy.png",
+        img: "assets/img/energy.png",
         html: "./pages/energies.html"
     },
     {
         id: "f5",
         section: "Specific Heat",
-        img: "../assets/img/heat.png",
+        img: "assets/img/heat.png",
         html: "./pages/heattransferred.html"
     },
     {
         id: "g2",
         section: "Pythagoras Theorem",
-        img: "../assets/img/pitagoras.png",
+        img: "assets/img/pitagoras.png",
         html: "./pages/pythagorastheorem.html"
     },
     {
         id: "c4",
         section: "Volume Conversions",
-        img: "../assets/img/volume.png",
+        img: "assets/img/volume.png",
         html: "./pages/volumeconversor.html"
     },
     {
         id: "m3",
         section: "Theory",
-        img: "../assets/img/theory.png",
+        img: "assets/img/theory.png",
         html: "./pages/theory.html"
     },
     {
         id: "c5",
         section: "Text to Binaries nums",
-        img: "../assets/img/binary.png",
+        img: "assets/img/binary.png",
         html: "./pages/binariesnumbers.html"
     }
 ]
