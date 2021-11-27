@@ -548,7 +548,7 @@ const indexData = [
         html: "./pages/temperatureConversion.html"
     },
     {
-        id: "d1",
+        id: "h1",
         section: "BMI Calculator",
         img: "assets/img/imc.png",
         html: "./pages/imccalculator.html"
