@@ -381,9 +381,9 @@ function hypothenusePT(){
     total = Math.sqrt((Math.pow(value1, 2)) + (Math.pow(valueSelectorTo, 2)));
     totalDom("#calculatedhypotenuseH", "Hypothenuse", "(measure)");
 }
-function translatedDom(ubication, find){
+function translatedDom(ubication, find, total){
     $(ubication).empty();
-    $(ubication).append(`<p class="totalTxt">${find} = ${binariesTranslated}</p>`)
+    $(ubication).append(`<p class="totalTxt">${find} = ${total}</p>`)
 }
 // Texto a binario
 function textToBinaries(){
@@ -395,6 +395,20 @@ function textToBinaries(){
             }
           })
     }
-    translatedDom("#translatedBinaries", "Translated");
+    translatedDom("#translatedBinaries", "Translated", binariesTranslated);
+    binariesTranslated = "";
+}
+function textToAscii(){
+    normalText = document.getElementById("textnormalValue").value;
+    const Array = []
+    for (let letters of normalText) {
+        Array.push(letters);
+    }
+    const asciicode = Array.map(function(letter){
+        return letter.charCodeAt(0);
+    })
+    asciiCodeString = asciicode.toString();
+    const asciiCodeStringSpace = asciiCodeString.replace(/,/g,' ');
+    translatedDom("#translatedAscii", "Translated", asciiCodeStringSpace);
     binariesTranslated = "";
 }

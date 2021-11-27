@@ -90,4 +90,7 @@ switch(file_name){
     case "binariesnumbers.html":
         btn_textToBinaries.addEventListener("click", textToBinaries);
         break;
+    case "asciinumbers.html":
+        btn_textToAscii.addEventListener("click", textToAscii);
+        break;
 }

@@ -11,8 +11,7 @@ indexData.forEach(renderIndex);
 const filterCategory = category => {
     indexFiltered = indexData.filter(function(element){
         return element.id.toLowerCase().indexOf(category.toLowerCase()) > -1;
-}
-)}
+})}
 function filterSections(selectedObject){
     const value = selectedObject.value;  
     switch(value){

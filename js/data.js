@@ -624,5 +624,11 @@ const indexData = [
         section: "Text to Binaries nums",
         img: "assets/img/binary.png",
         html: "./pages/binariesnumbers.html"
+    },
+    {
+        id: "c6",
+        section: "Text to Ascii code",
+        img: "assets/img/ascii.png",
+        html: "./pages/asciinumbers.html"
     }
 ]
