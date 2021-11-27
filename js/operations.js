@@ -420,9 +420,6 @@ function calculateKdr(){
             this.kills = Number(kills);
             this.deaths = Number(deaths);
         }
-        get product() {
-            return this.user;
-        }
         get KD() {
             return (this.kills / this.deaths);
         }
